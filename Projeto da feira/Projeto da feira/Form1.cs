@@ -69,6 +69,7 @@ namespace Projeto_da_feira
             
             
         }
+        //teste commit
         private void CarregarImagem(PictureBox pictureBox, string url)
         {
             using (WebClient client = new WebClient())
