@@ -1,0 +1,12 @@
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\bin\Debug\Projeto da feira.exe.config
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\bin\Debug\Projeto da feira.exe
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\bin\Debug\Projeto da feira.pdb
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\bin\Debug\Guna.UI2.dll
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.csproj.AssemblyReference.cache
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto_da_feira.Form1.resources
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto_da_feira.Properties.Resources.resources
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.csproj.GenerateResource.cache
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.csproj.CoreCompileInputs.cache
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto .1CD17054.Up2Date
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.exe
+C:\Users\rovar\Documents\GitHub\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.pdb
