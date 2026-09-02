@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\",
+  "WorkspaceRootPath": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|c:\\users\\rovar\\documents\\github\\projeto-feira-2-ds\\projeto da feira\\projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|c:\\users\\rovaron\\documents\\projects\\projeto-feira-2-ds\\projeto da feira\\projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|c:\\users\\rovar\\documents\\github\\projeto-feira-2-ds\\projeto da feira\\projeto da feira\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,37 +26,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Projeto da feira\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.Designer.cs",
-              "RelativeToolTip": "Projeto da feira\\Form1.Designer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwL4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
+              "RelativeDocumentMoniker": "Projeto da feira\\Form1.cs",
+              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
+              "RelativeToolTip": "Projeto da feira\\Form1.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAuwEEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T01:38:48.917Z",
+              "WhenOpened": "2026-09-02T00:02:35.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
-              "RelativeDocumentMoniker": "Projeto da feira\\Form1.cs",
-              "ToolTip": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
-              "RelativeToolTip": "Projeto da feira\\Form1.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowFIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T00:43:25.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
               "RelativeDocumentMoniker": "Projeto da feira\\Form1.cs",
-              "ToolTip": "C:\\Users\\rovar\\Documents\\GitHub\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs [Design]",
               "RelativeToolTip": "Projeto da feira\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-19T22:47:27.702Z",
