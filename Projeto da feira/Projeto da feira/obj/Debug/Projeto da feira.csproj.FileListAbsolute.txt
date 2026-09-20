@@ -72,3 +72,5 @@ C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto 
 C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Interop.WMPLib.dll
 C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto da feira.csproj.ResolveComReference.cache
+C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto_da_feira.Form3.resources
+C:\Users\Rovaron\Documents\Projects\Projeto-feira-2-DS\Projeto da feira\Projeto da feira\obj\Debug\Projeto_da_feira.Form_Playlist.resources

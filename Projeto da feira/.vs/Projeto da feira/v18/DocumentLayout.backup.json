@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form_playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form_playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form_playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form_playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\projeto da feira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C84540DA-4614-4BC9-BF81-76BF53F7AC22}|Projeto da feira\\Projeto da feira.csproj|solutionrelative:projeto da feira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,45 +40,60 @@
               "RelativeDocumentMoniker": "Projeto da feira\\Form1.cs",
               "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
               "RelativeToolTip": "Projeto da feira\\Form1.cs",
-              "ViewState": "AgIAAAACAAAAAAAAAAAmwDUCAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPoBAAAAAAAAAAAiwBMCAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T00:02:35.07Z",
+              "WhenOpened": "2026-09-20T22:27:13.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form_Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form_Playlist.cs",
+              "RelativeDocumentMoniker": "Projeto da feira\\Form_Playlist.cs",
+              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form_Playlist.cs",
+              "RelativeToolTip": "Projeto da feira\\Form_Playlist.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAmwGEBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T02:14:06.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Projeto da feira\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.Designer.cs",
-              "RelativeToolTip": "Projeto da feira\\Form1.Designer.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAADgv9YAAABDAAAAAAAAAA==",
+              "Title": "Form_Playlist.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form_Playlist.cs",
+              "RelativeDocumentMoniker": "Projeto da feira\\Form_Playlist.cs",
+              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form_Playlist.cs [Design]",
+              "RelativeToolTip": "Projeto da feira\\Form_Playlist.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T12:25:58.357Z"
+              "WhenOpened": "2026-09-20T02:13:58.755Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Program.cs",
-              "RelativeDocumentMoniker": "Projeto da feira\\Program.cs",
-              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Program.cs",
-              "RelativeToolTip": "Projeto da feira\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAApwBIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T18:21:27.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs",
               "RelativeDocumentMoniker": "Projeto da feira\\Form1.cs",
               "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Form1.cs [Design]",
               "RelativeToolTip": "Projeto da feira\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T22:47:27.702Z"
+              "WhenOpened": "2026-09-19T20:57:03.312Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Program.cs",
+              "RelativeDocumentMoniker": "Projeto da feira\\Program.cs",
+              "ToolTip": "C:\\Users\\Rovaron\\Documents\\Projects\\Projeto-feira-2-DS\\Projeto da feira\\Projeto da feira\\Program.cs",
+              "RelativeToolTip": "Projeto da feira\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T18:21:27.748Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -89,6 +89,30 @@ namespace Projeto_da_feira
 
                                 int idUsuario = Convert.ToInt32(leitor["pk_id_user"]);
 
+                                // --- INÍCIO DA VERIFICAÇÃO DA PLAYLIST "CURTIDAS" ---
+                                // Fechamos o leitor atual antes de abrir um novo comando na mesma conexão
+                                leitor.Close();
+
+                                // 1. Verifica se já existe a playlist "Curtidas" para este usuário
+                                string queryVerifica = "SELECT COUNT(*) FROM playlist WHERE fk_id_user_playlist = @IdUsuario AND nome_playlist = 'Curtidas'";
+                                using (var cmdVerifica = new NpgsqlCommand(queryVerifica, conexao))
+                                {
+                                    cmdVerifica.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                                    long quantidade = (long)cmdVerifica.ExecuteScalar();
+
+                                    // 2. Se não existir (quantidade == 0), cria a playlist
+                                    if (quantidade == 0)
+                                    {
+                                        string queryCria = "INSERT INTO playlist (music_playlist,nome_playlist, fk_id_user_playlist) VALUES (0,'Curtidas', @IdUsuario)";
+                                        using (var cmdCria = new NpgsqlCommand(queryCria, conexao))
+                                        {
+                                            cmdCria.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                                            cmdCria.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                                // --- FIM DA VERIFICAÇÃO ---
+
                                 Form1 form1 = new Form1(idUsuario);
                                 form1.Show();
 
@@ -104,10 +128,22 @@ namespace Projeto_da_feira
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("erro" + ex);
+                    MessageBox.Show("erro: " + ex.Message);
                 }
             }
+        }
 
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
+        {
+            Form3 form = new Form3();
+            form.Show();
+
+            this.Hide();
         }
     }
 }
