@@ -260,7 +260,7 @@ namespace Projeto_da_feira
         {
             
             guna2PictureBox1.ImageLocation = Playlist.imagem;
-            guna2HtmlLabel1.Text = Playlist.nome;
+            label_nomePlaylist.Text = Playlist.nome;
             if (Playlist.imagem != null)
             {
                
@@ -485,6 +485,16 @@ namespace Projeto_da_feira
             BotaoFoiClicado?.Invoke(this, EventArgs.Empty);
             
             this.Close();
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label_nomePlaylist_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

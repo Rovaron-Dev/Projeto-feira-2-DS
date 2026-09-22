@@ -160,13 +160,14 @@
       <DependentUpon>Form_Playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -200,6 +201,22 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inter-Bold.ttf" />
+    <None Include="Resources\Inter-Medium.ttf" />
+    <None Include="Resources\Inter-Regular.ttf" />
+    <None Include="Resources\Inter-SemiBold.ttf" />
+    <None Include="Resources\Logo Final %281%29 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beatcode.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

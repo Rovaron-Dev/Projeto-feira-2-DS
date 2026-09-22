@@ -384,9 +384,9 @@ namespace Projeto_da_feira
         public class Conexao
         {
             private string connectionString =
-                "Host=db.zjlnoxudmxjanibkptpf.supabase.co;Port=5432;" +
+                "Host=aws-0-sa-east-1.pooler.supabase.com;"+
                 "Database=postgres;" +
-                "Username=postgres;" +
+                "Username=postgres.zjlnoxudmxjanibkptpf;" +
                 "Password=reuna6genins;" +
                 "SSL Mode=Require;" +
                 "Trust Server Certificate=true";
@@ -732,7 +732,7 @@ namespace Projeto_da_feira
 
             if (string.IsNullOrWhiteSpace(pesquisa))
             {
-                pesquisa = "pop";
+                pesquisa = "sahur";
             }
 
             JObject resultado =
