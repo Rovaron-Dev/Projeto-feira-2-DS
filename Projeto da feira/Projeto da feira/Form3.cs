@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Guna.UI2.WinForms;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace Projeto_da_feira
         {
 
         }
+
+        
         public static class Cores
         {
             public static Color Fundo = Color.FromArgb(255, 5, 5, 7);
@@ -34,9 +37,9 @@ namespace Projeto_da_feira
         {
             private string connectionString =
 
-                "Host=db.zjlnoxudmxjanibkptpf.supabase.co;Port=5432;" +
+                "Host=aws-0-sa-east-1.pooler.supabase.com;" +
                 "Database=postgres;" +
-                "Username=postgres;" +
+                "Username=postgres.zjlnoxudmxjanibkptpf;" +
                 "Password=reuna6genins;" +
                 "SSL Mode=Require;" +
                 "Trust Server Certificate=true";
@@ -58,28 +61,12 @@ namespace Projeto_da_feira
 
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             Form2 form1 = new Form2();
             form1.Show();
 
             this.Hide();
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
-        {
-            
-
         }
 
         private void guna2HtmlLabel2_Click_1(object sender, EventArgs e)
@@ -159,6 +146,28 @@ namespace Projeto_da_feira
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             picture.ImageLocation = urltxt.Text;
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel_fundo.Location = new Point((this.ClientSize.Width - panel_fundo.Width) / 2, ((this.ClientSize.Height - panel_fundo.Height) / 2) + 100);
+        }
+
+        private void Form3_Resize(object sender, EventArgs e)
+        {
+            panel_fundo.Location = new Point((this.ClientSize.Width - panel_fundo.Width) / 2, (this.ClientSize.Height - panel_fundo.Height) / 2);
+            pb_beatCode.Location = new Point((this.ClientSize.Width - pb_beatCode.Width) / 2, pb_beatCode.Location.Y);
+            
+        }
+
+        private void nometxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailtxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

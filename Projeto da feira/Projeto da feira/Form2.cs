@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,20 @@ namespace Projeto_da_feira
 {
     public partial class Form2 : Form
     {
+        PrivateFontCollection fonteCollection = new PrivateFontCollection();
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            CarregarFonteInter();
+        }
+        private void CarregarFonteInter()
+        {
+
         }
         public static class Cores
         {
@@ -34,9 +41,9 @@ namespace Projeto_da_feira
         {
             private string connectionString =
 
-                "Host=db.zjlnoxudmxjanibkptpf.supabase.co;Port=5432;" +
+                "Host=aws-0-sa-east-1.pooler.supabase.com;" +
                 "Database=postgres;" +
-                "Username=postgres;" +
+                "Username=postgres.zjlnoxudmxjanibkptpf;" +
                 "Password=reuna6genins;" +
                 "SSL Mode=Require;" +
                 "Trust Server Certificate=true";
@@ -135,7 +142,10 @@ namespace Projeto_da_feira
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            guna2CustomGradientPanel1.Location = new Point((this.ClientSize.Width - guna2CustomGradientPanel1.Width) / 2, ((this.ClientSize.Height - guna2CustomGradientPanel1.Height) / 2) + 100);
+            emailtxt.Location = new Point((guna2CustomGradientPanel1.Width - emailtxt.Width) / 2, emailtxt.Location.Y);
+            senhatxt.Location = new Point((guna2CustomGradientPanel1.Width - senhatxt.Width) / 2, senhatxt.Location.Y);
+            pb_beatCode.Location = new Point((this.ClientSize.Width - pb_beatCode.Width) / 2, pb_beatCode.Location.Y);
         }
 
         private void guna2GradientButton1_Click_1(object sender, EventArgs e)
@@ -144,6 +154,46 @@ namespace Projeto_da_feira
             form.Show();
 
             this.Hide();
+        }
+
+        private void Form2_Resize(object sender, EventArgs e)
+        {
+            guna2CustomGradientPanel1.Location = new Point((this.ClientSize.Width - guna2CustomGradientPanel1.Width) / 2, (this.ClientSize.Height - guna2CustomGradientPanel1.Height) / 2);
+        }
+
+        private void emailtxt_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pb_beatCode_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2HtmlLabel3_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
