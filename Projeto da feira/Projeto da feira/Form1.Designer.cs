@@ -39,46 +39,50 @@ namespace Projeto_da_feira
             this.Fpanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pesquisatxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.FplaylistCard1 = new Guna.UI2.WinForms.Guna2Panel();
             this.FBiblioteca = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.Display = new Guna.UI2.WinForms.Guna2Panel();
-            this.volume = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.lblMusicaNome = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.musicImg = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.lblMusicaNome = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Display2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.titulolbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.volume = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.playlistForm = new Guna.UI2.WinForms.Guna2Panel();
             this.formtable = new System.Windows.Forms.TableLayoutPanel();
-            this.Display2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.musicImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.imagembbar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.titulolbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.duracao = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tempo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.Fpanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.FBiblioteca.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.Display.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.formtable.SuspendLayout();
-            this.Display2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
+            this.Display.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.Display2.SuspendLayout();
+            this.formtable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -164,12 +168,14 @@ namespace Projeto_da_feira
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.pesquisatxt, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.guna2CircleButton2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2PictureBox2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(245, 92);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
@@ -179,15 +185,15 @@ namespace Projeto_da_feira
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pesquisatxt.BackColor = System.Drawing.Color.Transparent;
-            this.pesquisatxt.BorderRadius = 8;
-            this.pesquisatxt.BorderThickness = 0;
+            this.pesquisatxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.pesquisatxt.BorderRadius = 13;
             this.pesquisatxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pesquisatxt.DefaultText = "";
             this.pesquisatxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pesquisatxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.pesquisatxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.pesquisatxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.pesquisatxt.FillColor = System.Drawing.Color.DarkGray;
+            this.pesquisatxt.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pesquisatxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pesquisatxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.pesquisatxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -195,28 +201,11 @@ namespace Projeto_da_feira
             this.pesquisatxt.Location = new System.Drawing.Point(80, 37);
             this.pesquisatxt.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.pesquisatxt.Name = "pesquisatxt";
+            this.pesquisatxt.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
             this.pesquisatxt.PlaceholderText = "";
             this.pesquisatxt.SelectedText = "";
             this.pesquisatxt.Size = new System.Drawing.Size(155, 40);
             this.pesquisatxt.TabIndex = 2;
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(7, 29);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(56, 56);
-            this.guna2CircleButton2.TabIndex = 3;
-            this.guna2CircleButton2.Text = "lupa";
-            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
             // 
             // FplaylistCard1
             // 
@@ -252,19 +241,6 @@ namespace Projeto_da_feira
             this.tableLayoutPanel3.Size = new System.Drawing.Size(235, 323);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(163, 225);
-            this.flowLayoutPanel2.TabIndex = 0;
-            this.flowLayoutPanel2.WrapContents = false;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -293,24 +269,57 @@ namespace Projeto_da_feira
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
-            // guna2PictureBox1
+            // tableLayoutPanel5
             // 
-            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 7);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 66);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.guna2Button2, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(229, 231);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(163, 225);
+            this.flowLayoutPanel2.TabIndex = 0;
+            this.flowLayoutPanel2.WrapContents = false;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(172, 3);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Size = new System.Drawing.Size(45, 45);
+            this.guna2Button2.TabIndex = 1;
+            this.guna2Button2.Text = "+";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // Display
             // 
             this.Display.Controls.Add(this.musicImg);
             this.Display.Controls.Add(this.axWindowsMediaPlayer1);
-            this.Display.Controls.Add(this.lblMusicaNome);
             this.Display.Controls.Add(this.Display2);
             this.Display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Display.FillColor = System.Drawing.Color.Gray;
@@ -319,100 +328,6 @@ namespace Projeto_da_feira
             this.Display.Size = new System.Drawing.Size(1336, 171);
             this.Display.TabIndex = 999999999;
             this.Display.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Paint);
-            // 
-            // volume
-            // 
-            this.volume.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.volume.BackColor = System.Drawing.Color.Transparent;
-            this.volume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.volume.Location = new System.Drawing.Point(1045, -17);
-            this.volume.Name = "volume";
-            this.volume.Size = new System.Drawing.Size(304, 35);
-            this.volume.SmallChange = 4;
-            this.volume.TabIndex = 102;
-            this.volume.ThumbColor = System.Drawing.Color.Teal;
-            this.volume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar2_Scroll);
-            // 
-            // lblMusicaNome
-            // 
-            this.lblMusicaNome.AutoSize = false;
-            this.lblMusicaNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblMusicaNome.Font = new System.Drawing.Font("Inter SemiBold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMusicaNome.Location = new System.Drawing.Point(821, -15);
-            this.lblMusicaNome.Name = "lblMusicaNome";
-            this.lblMusicaNome.Size = new System.Drawing.Size(400, 87);
-            this.lblMusicaNome.TabIndex = 101;
-            this.lblMusicaNome.Text = "a";
-            this.lblMusicaNome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblMusicaNome.Visible = false;
-            // 
-            // musicImg
-            // 
-            this.musicImg.BackColor = System.Drawing.Color.Transparent;
-            this.musicImg.BorderRadius = 10;
-            this.musicImg.ImageRotate = 0F;
-            this.musicImg.Location = new System.Drawing.Point(79, -315);
-            this.musicImg.Name = "musicImg";
-            this.musicImg.ShadowDecoration.BorderRadius = 30;
-            this.musicImg.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
-            this.musicImg.ShadowDecoration.Depth = 3;
-            this.musicImg.ShadowDecoration.Enabled = true;
-            this.musicImg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
-            this.musicImg.Size = new System.Drawing.Size(400, 400);
-            this.musicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.musicImg.TabIndex = 0;
-            this.musicImg.TabStop = false;
-            this.musicImg.UseTransparentBackground = true;
-            this.musicImg.Visible = false;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1131, 19);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(54, 44);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Visible = false;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2TrackBar1
-            // 
-            this.guna2TrackBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TrackBar1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TrackBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TrackBar1.Location = new System.Drawing.Point(420, 74);
-            this.guna2TrackBar1.Name = "guna2TrackBar1";
-            this.guna2TrackBar1.Size = new System.Drawing.Size(454, 70);
-            this.guna2TrackBar1.SmallChange = 4;
-            this.guna2TrackBar1.TabIndex = 100;
-            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.Teal;
-            this.guna2TrackBar1.Value = 0;
-            this.guna2TrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(631, 17);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(63, 56);
-            this.guna2CircleButton1.TabIndex = 1;
-            this.guna2CircleButton1.Text = "guna2CircleButton1";
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // axWindowsMediaPlayer1
             // 
@@ -423,6 +338,97 @@ namespace Projeto_da_feira
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(41, 34);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // lblMusicaNome
+            // 
+            this.lblMusicaNome.AutoSize = false;
+            this.lblMusicaNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblMusicaNome.Font = new System.Drawing.Font("Inter SemiBold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMusicaNome.Location = new System.Drawing.Point(662, 53);
+            this.lblMusicaNome.Name = "lblMusicaNome";
+            this.lblMusicaNome.Size = new System.Drawing.Size(400, 87);
+            this.lblMusicaNome.TabIndex = 101;
+            this.lblMusicaNome.Text = "a";
+            this.lblMusicaNome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMusicaNome.Visible = false;
+            // 
+            // Display2
+            // 
+            this.Display2.BackColor = System.Drawing.Color.Transparent;
+            this.Display2.Controls.Add(this.tempo);
+            this.Display2.Controls.Add(this.duracao);
+            this.Display2.Controls.Add(this.titulolbl);
+            this.Display2.Controls.Add(this.imagembbar);
+            this.Display2.Controls.Add(this.lblMusicaNome);
+            this.Display2.Controls.Add(this.volume);
+            this.Display2.Controls.Add(this.guna2CircleButton1);
+            this.Display2.Controls.Add(this.guna2TrackBar1);
+            this.Display2.Controls.Add(this.guna2Button1);
+            this.Display2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Display2.Location = new System.Drawing.Point(0, 0);
+            this.Display2.Name = "Display2";
+            this.Display2.Size = new System.Drawing.Size(1336, 171);
+            this.Display2.TabIndex = 103;
+            // 
+            // titulolbl
+            // 
+            this.titulolbl.AutoSize = false;
+            this.titulolbl.BackColor = System.Drawing.Color.Transparent;
+            this.titulolbl.Font = new System.Drawing.Font("Inter", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulolbl.Location = new System.Drawing.Point(99, 68);
+            this.titulolbl.Name = "titulolbl";
+            this.titulolbl.Size = new System.Drawing.Size(400, 76);
+            this.titulolbl.TabIndex = 104;
+            this.titulolbl.Text = null;
+            this.titulolbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titulolbl.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            // 
+            // volume
+            // 
+            this.volume.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.volume.BackColor = System.Drawing.Color.Transparent;
+            this.volume.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.volume.Location = new System.Drawing.Point(1045, -6);
+            this.volume.Name = "volume";
+            this.volume.Size = new System.Drawing.Size(304, 4);
+            this.volume.SmallChange = 4;
+            this.volume.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.volume.TabIndex = 102;
+            this.volume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.volume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar2_Scroll);
+            // 
+            // guna2TrackBar1
+            // 
+            this.guna2TrackBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2TrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TrackBar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2TrackBar1.FillColor = System.Drawing.Color.Silver;
+            this.guna2TrackBar1.Location = new System.Drawing.Point(700, 140);
+            this.guna2TrackBar1.Name = "guna2TrackBar1";
+            this.guna2TrackBar1.Size = new System.Drawing.Size(640, 4);
+            this.guna2TrackBar1.SmallChange = 0;
+            this.guna2TrackBar1.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.guna2TrackBar1.TabIndex = 100;
+            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.guna2TrackBar1.Value = 0;
+            this.guna2TrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(1131, 30);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(54, 44);
+            this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Visible = false;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // timer1
             // 
@@ -456,20 +462,24 @@ namespace Projeto_da_feira
             this.formtable.Size = new System.Drawing.Size(1342, 733);
             this.formtable.TabIndex = 1000000001;
             // 
-            // Display2
+            // musicImg
             // 
-            this.Display2.BackColor = System.Drawing.Color.Transparent;
-            this.Display2.Controls.Add(this.titulolbl);
-            this.Display2.Controls.Add(this.imagembbar);
-            this.Display2.Controls.Add(this.volume);
-            this.Display2.Controls.Add(this.guna2CircleButton1);
-            this.Display2.Controls.Add(this.guna2TrackBar1);
-            this.Display2.Controls.Add(this.guna2Button1);
-            this.Display2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Display2.Location = new System.Drawing.Point(0, 22);
-            this.Display2.Name = "Display2";
-            this.Display2.Size = new System.Drawing.Size(1336, 149);
-            this.Display2.TabIndex = 103;
+            this.musicImg.BackColor = System.Drawing.Color.Transparent;
+            this.musicImg.BorderRadius = 10;
+            this.musicImg.ImageRotate = 0F;
+            this.musicImg.Location = new System.Drawing.Point(79, -315);
+            this.musicImg.Name = "musicImg";
+            this.musicImg.ShadowDecoration.BorderRadius = 30;
+            this.musicImg.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
+            this.musicImg.ShadowDecoration.Depth = 3;
+            this.musicImg.ShadowDecoration.Enabled = true;
+            this.musicImg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
+            this.musicImg.Size = new System.Drawing.Size(400, 400);
+            this.musicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.musicImg.TabIndex = 0;
+            this.musicImg.TabStop = false;
+            this.musicImg.UseTransparentBackground = true;
+            this.musicImg.Visible = false;
             // 
             // imagembbar
             // 
@@ -489,51 +499,98 @@ namespace Projeto_da_feira
             this.imagembbar.TabStop = false;
             this.imagembbar.UseTransparentBackground = true;
             // 
-            // titulolbl
+            // guna2CircleButton1
             // 
-            this.titulolbl.AutoSize = false;
-            this.titulolbl.BackColor = System.Drawing.Color.Transparent;
-            this.titulolbl.Font = new System.Drawing.Font("Inter", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulolbl.Location = new System.Drawing.Point(99, 68);
-            this.titulolbl.Name = "titulolbl";
-            this.titulolbl.Size = new System.Drawing.Size(400, 76);
-            this.titulolbl.TabIndex = 104;
-            this.titulolbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titulolbl.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            this.guna2CircleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::Projeto_da_feira.Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
+            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, -2);
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(631, 28);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(63, 56);
+            this.guna2CircleButton1.TabIndex = 1;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
-            // tableLayoutPanel5
+            // guna2CircleButton2
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel2, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.guna2Button2, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(229, 231);
-            this.tableLayoutPanel5.TabIndex = 0;
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Image = global::Projeto_da_feira.Properties.Resources._87_872187_lupa_search_icon_white_png;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(7, 29);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(7);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(56, 56);
+            this.guna2CircleButton2.TabIndex = 3;
+            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
             // 
-            // guna2Button2
+            // guna2PictureBox2
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(172, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "+";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.tableLayoutPanel2.SetColumnSpan(this.guna2PictureBox2, 2);
+            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::Projeto_da_feira.Properties.Resources.Logo;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(239, 16);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 4;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 7);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 66);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // duracao
+            // 
+            this.duracao.AutoSize = false;
+            this.duracao.BackColor = System.Drawing.Color.Transparent;
+            this.duracao.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duracao.ForeColor = System.Drawing.Color.White;
+            this.duracao.Location = new System.Drawing.Point(1005, 53);
+            this.duracao.Name = "duracao";
+            this.duracao.Size = new System.Drawing.Size(81, 32);
+            this.duracao.TabIndex = 105;
+            this.duracao.Text = "0:29";
+            // 
+            // tempo
+            // 
+            this.tempo.AutoSize = false;
+            this.tempo.BackColor = System.Drawing.Color.Transparent;
+            this.tempo.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempo.ForeColor = System.Drawing.Color.White;
+            this.tempo.Location = new System.Drawing.Point(985, 120);
+            this.tempo.Name = "tempo";
+            this.tempo.Size = new System.Drawing.Size(101, 42);
+            this.tempo.TabIndex = 106;
+            this.tempo.Text = "0:00";
             // 
             // Form1
             // 
@@ -543,6 +600,7 @@ namespace Projeto_da_feira
             this.ClientSize = new System.Drawing.Size(1342, 733);
             this.Controls.Add(this.formtable);
             this.ForeColor = System.Drawing.Color.Transparent;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -559,14 +617,15 @@ namespace Projeto_da_feira
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.Display.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            this.formtable.ResumeLayout(false);
-            this.Display2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.Display.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.Display2.ResumeLayout(false);
+            this.formtable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,6 +666,9 @@ namespace Projeto_da_feira
         private Guna.UI2.WinForms.Guna2PictureBox imagembbar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel tempo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel duracao;
     }
 }
 

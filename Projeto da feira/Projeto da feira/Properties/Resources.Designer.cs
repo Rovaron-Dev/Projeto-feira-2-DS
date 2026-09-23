@@ -63,6 +63,16 @@ namespace Projeto_da_feira.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _87_872187_lupa_search_icon_white_png {
+            get {
+                object obj = ResourceManager.GetObject("87-872187_lupa-search-icon-white-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bc {
             get {
                 object obj = ResourceManager.GetObject("bc", resourceCulture);
@@ -76,6 +86,36 @@ namespace Projeto_da_feira.Properties {
         public static System.Drawing.Bitmap beatcode {
             get {
                 object obj = ResourceManager.GetObject("beatcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Captura_de_tela_2026_09_22_232649 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2026-09-22 232649", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ChatGPT_Image_22_de_set__de_2026__23_30_51 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 22 de set. de 2026, 23_30_51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ChatGPT_Image_22_de_set__de_2026__23_37_37_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT_Image_22_de_set._de_2026__23_37_37-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
