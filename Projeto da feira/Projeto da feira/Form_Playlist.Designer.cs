@@ -31,9 +31,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label_nomePlaylist = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -63,7 +63,6 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Controls.Add(this.tableLayoutPanel2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -76,11 +75,13 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.guna2PictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label_nomePlaylist, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label_nomePlaylist, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2Button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2PictureBox1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -91,16 +92,29 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1918, 373);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(73, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.tableLayoutPanel2.SetRowSpan(this.guna2PictureBox1, 3);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(301, 313);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // label_nomePlaylist
             // 
             this.label_nomePlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.label_nomePlaylist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_nomePlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_nomePlaylist.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label_nomePlaylist.Location = new System.Drawing.Point(316, 76);
+            this.label_nomePlaylist.Location = new System.Drawing.Point(380, 76);
             this.label_nomePlaylist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label_nomePlaylist.Name = "label_nomePlaylist";
-            this.label_nomePlaylist.Size = new System.Drawing.Size(1599, 219);
+            this.label_nomePlaylist.Size = new System.Drawing.Size(206, 93);
             this.label_nomePlaylist.TabIndex = 2;
             this.label_nomePlaylist.Text = "nome";
             this.label_nomePlaylist.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,27 +128,13 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(5, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(3, 2);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(44, 46);
+            this.guna2Button1.Size = new System.Drawing.Size(64, 70);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "guna2Button1";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.tableLayoutPanel2.SetRowSpan(this.guna2PictureBox1, 3);
-            this.guna2PictureBox1.Size = new System.Drawing.Size(307, 313);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // flowLayoutPanel1
             // 

@@ -258,7 +258,7 @@ namespace Projeto_da_feira
         }
         private async Task startGraph()
         {
-            
+            guna2PictureBox1.Location = new Point(tableLayoutPanel1.Height/2);
             guna2PictureBox1.ImageLocation = Playlist.imagem;
             label_nomePlaylist.Text = Playlist.nome;
             if (Playlist.imagem != null)
