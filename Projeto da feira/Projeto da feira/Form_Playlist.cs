@@ -267,6 +267,9 @@ namespace Projeto_da_feira
                    
                 guna2GradientPanel1.FillColor = await ObterCorPredominanteAsync(Playlist.imagem); ;
             }
+            guna2PictureBox1.Location= new Point(
+                0, tableLayoutPanel1.Width / 2 - guna2PictureBox1.Width / 2
+                );
             BackColor = Cores.FundoSecundario;
         }
         // ID da música atualmente selecionada/ativa (por instância)
@@ -493,6 +496,11 @@ namespace Projeto_da_feira
         }
 
         private void label_nomePlaylist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -2,7 +2,6 @@
 using NAudio.Wave;
 using Newtonsoft.Json.Linq;
 using Npgsql;
-using Projeto_da_feira.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +19,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static Projeto_da_feira.Form_Playlist;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Projeto_da_feira
 {
@@ -931,7 +929,7 @@ namespace Projeto_da_feira
                 );
 
             labelartist.ForeColor =
-                Cores.Roxo; // Tom mais suave parecido com o estilo Spotify/Clean
+                Color.DarkGray; // Tom mais suave parecido com o estilo Spotify/Clean
 
             labelartist.AutoSize = false;
             labelartist.Dock =
@@ -1532,18 +1530,8 @@ namespace Projeto_da_feira
                 new Point(
                     this.Width / 2 -
                     guna2TrackBar1.Width / 2,
-                   60
+                    50
                 );
-            duracao.Location =
-                new Point(
-                    guna2TrackBar1.Location.X + 750 + 2,
-                   guna2TrackBar1.Location.Y +10
-                );
-            tempo.Location =
-               new Point(
-                   guna2TrackBar1.Location.X + guna2TrackBar1.Width/2 -8,
-                  guna2TrackBar1.Location.Y +10
-               );
             volume.Location =
                 new Point(
                     guna2TrackBar1.Location.X + guna2TrackBar1.Width + 270,
@@ -1552,19 +1540,19 @@ namespace Projeto_da_feira
             guna2Button1.Location =
                     new Point(
                         volume.Location.X - guna2Button1.Width - 10,
-                        volume.Location.Y - guna2Button1.Height/2
+                        volume.Location.Y
                     );
 
             guna2CircleButton1.Location =
                 new Point(
                     this.Width / 2 -
                     guna2CircleButton1.Width / 2,
-                   -10
+                    10
                 );
             imagembbar.Location =
                 new Point(
                     30
-                    , 20
+                    , guna2TrackBar1.Location.Y - 30
                     );
 
             titulolbl.Location =
@@ -1576,7 +1564,7 @@ namespace Projeto_da_feira
             titulolbl.TextAlignment = ContentAlignment.TopLeft;
             guna2TrackBar1.BackColor =
                 Color.Transparent;
-            
+
             this.DoubleBuffered =
                 true;
 
@@ -1625,22 +1613,16 @@ namespace Projeto_da_feira
             object sender,
             EventArgs e)
         {
-            
             if (
                 axWindowsMediaPlayer1.playState ==
                 WMPLib.WMPPlayState.wmppsPlaying
             )
             {
-                guna2CircleButton1.Image = Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
-                guna2CircleButton1.ImageOffset = new Point(1,-2);
                 axWindowsMediaPlayer1.Ctlcontrols.pause();
             }
-            else if (axWindowsMediaPlayer1.playState ==
-                WMPLib.WMPPlayState.wmppsPaused)
+            else
             {
-
-                guna2CircleButton1.Image = Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_37_37_removebg_preview;
-                guna2CircleButton1.ImageOffset = new Point(0, 0);
+                guna2CircleButton1.Image = Image.FromFile
                 axWindowsMediaPlayer1.Ctlcontrols.play();
             }
         }
@@ -1648,8 +1630,6 @@ namespace Projeto_da_feira
 
         private async void TocarMusica()
         {
-            guna2CircleButton1.Image = Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_37_37_removebg_preview;
-            guna2CircleButton1.ImageOffset = new Point(0, 0);
             axWindowsMediaPlayer1.settings.volume = volume.Value;
             guna2Button1.Visible = true;
             titulolbl.Text = Musica.nome;
@@ -1697,7 +1677,7 @@ namespace Projeto_da_feira
 
                 guna2TrackBar1.Value =
                     (int)atual;
-                tempo.Text = TimeSpan.FromSeconds((int)atual).ToString(@"m\:ss");
+
 
                 if (
                     Preferences.loop &&
@@ -1744,7 +1724,6 @@ namespace Projeto_da_feira
             if (clickCount % 2 == 1)
             {
                 Display2.FillColor = Cores.FundoSecundario;
-                Display2.Dock = DockStyle.Bottom;
                 this.Visible = false;
                 formtable.RowStyles[0].SizeType = SizeType.Percent;
                 formtable.RowStyles[0].Height = 0f;
@@ -1781,7 +1760,6 @@ namespace Projeto_da_feira
             }
             else
             {
-                Display2.Dock = DockStyle.Fill;
                 imagembbar.Visible = true;
                 titulolbl.Visible = true;
 

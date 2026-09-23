@@ -80,7 +80,8 @@ namespace Projeto_da_feira
             string senha = senhatxt.Text;
             string nome = nometxt.Text; // Certifique-se de que a caixa de texto existe
             picture.ImageLocation = urltxt.Text;
-            if (picture.Image == picture.ErrorImage || email == null || senha == null || nome == null)
+            MessageBox.Show(email);
+            if (picture.Image == picture.ErrorImage || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha) | string.IsNullOrWhiteSpace(nome))
             {
                 MessageBox.Show("Verifique todos os campos ou se a imagem é valida");
             }
@@ -140,12 +141,12 @@ namespace Projeto_da_feira
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            picture.ImageLocation = urltxt.Text;    
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            picture.ImageLocation = urltxt.Text;
+            
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -162,7 +163,7 @@ namespace Projeto_da_feira
 
         private void nometxt_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void emailtxt_TextChanged(object sender, EventArgs e)
