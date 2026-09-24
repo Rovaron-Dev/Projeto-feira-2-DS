@@ -245,6 +245,7 @@ namespace Projeto_da_feira
                 return JObject.Parse(json);
             }
         }
+        
         Conexao conexao = new Conexao();
         public Form_Playlist(string nome,long id, List<long> musicas, string imagem)
         {

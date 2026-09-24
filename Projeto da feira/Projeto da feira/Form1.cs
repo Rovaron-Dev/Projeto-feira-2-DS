@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using Npgsql;
 using Projeto_da_feira.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ using System.Net;
 using System.Net.Http;
 using System.Numerics;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -457,7 +459,7 @@ namespace Projeto_da_feira
                                 string urlCapa = await imagemMusica(idMusicUltima);
 
                                 // 1. AQUI ESTÁ A LISTA: Pega todas as músicas que possuem esse mesmo id_playlist
-                                List<long> todasAsMusicasDaPlaylist = await ObterMusicasDaPlaylistAsync(id);
+                                List<long> todasAsMusicasDaPlaylist = await ObterMusicasDaPlaylistAsync(id,nome);
 
                                 // 2. Passa os dados para o card (pode ajustar o CardPlaylist para receber a lista se precisar dela lá dentro)
                                 CardPlaylist(id, nome, urlCapa,todasAsMusicasDaPlaylist);
@@ -473,32 +475,66 @@ namespace Projeto_da_feira
         }
 
         // Método auxiliar que busca todas as músicas daquele id_playlist em ordem de inserção
-        private async Task<List<long>> ObterMusicasDaPlaylistAsync(long idPlaylist)
+        private async Task<List<long>> ObterMusicasDaPlaylistAsync(long idPlaylist , string nome)
         {
             List<long> listaMusicas = new List<long>();
-
             try
             {
                 using (NpgsqlConnection conn = conexao.Abrir())
                 {
                     await conn.OpenAsync();
 
-                    string query = @"
+                    string query;
+
+                    if (nome != "Histórico")
+                    {
+                        query = @"
                 SELECT music_playlist 
                 FROM playlist 
                 WHERE id_playlist = @IdPlaylist 
                   AND music_playlist <> 0 
                 ORDER BY pk_id_playlist ASC";
+                    }
+                    else
+                    {
+                        query = @"
+                SELECT music_id
+                FROM historic
+                WHERE fk_id_user_historic = @UserId
+                  AND music_id <> 0
+                ORDER BY pk_id_historic desc";
+                    }
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@IdPlaylist", idPlaylist);
+                        if (nome != "Histórico")
+                        {
+                            cmd.Parameters.AddWithValue("@IdPlaylist", idPlaylist);
+                        }
+                        else
+                        {
+                          
+                            cmd.Parameters.AddWithValue("@UserId", User.id);
+                        }
 
-                        using (NpgsqlDataReader reader = (NpgsqlDataReader)await cmd.ExecuteReaderAsync())
+                        using (NpgsqlDataReader reader =
+                               (NpgsqlDataReader)await cmd.ExecuteReaderAsync())
                         {
                             while (await reader.ReadAsync())
                             {
-                                long idMusica = reader.GetInt64(reader.GetOrdinal("music_playlist"));
+                                long idMusica;
+
+                                if (nome != "Histórico")
+                                {
+                                    idMusica = reader.GetInt64(
+                                        reader.GetOrdinal("music_playlist"));
+                                }
+                                else
+                                {
+                                    idMusica = reader.GetInt64(
+                                        reader.GetOrdinal("music_id"));
+                                }
+
                                 listaMusicas.Add(idMusica);
                             }
                         }
@@ -507,7 +543,8 @@ namespace Projeto_da_feira
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Erro ao buscar músicas da playlist: " + ex.Message);
+                System.Diagnostics.Debug.WriteLine(
+                    "Erro ao buscar músicas: " + ex.Message);
             }
 
             return listaMusicas;
@@ -779,7 +816,7 @@ namespace Projeto_da_feira
 
             flowLayoutPanel1.Visible = true;
         }
-
+        bool historicbool = false;
 
         private void CriarCardsMusica(
      long id,
@@ -976,6 +1013,12 @@ namespace Projeto_da_feira
                 }
                 else
                 {
+
+
+                    flowLayoutPanel2.Controls.Clear();
+                    historicinvert();
+                    AdicionarHistórico();
+                    CarregarBiblioteca();
                     TocarMusica();
                 }
             }
@@ -987,7 +1030,7 @@ namespace Projeto_da_feira
             labelartist.Click += CliqueCard;
             pictureBox.Click += CliqueCard;
 
-
+            
             // Adicionando os controlos ao TableLayout nas respetivas linhas
             grid.Controls.Add(
                 pictureBox,
@@ -1822,8 +1865,67 @@ namespace Projeto_da_feira
                 }
             }
         }
+        public static List<long> historicoMusica = new List<long>();
+        public static int historicoIndex = -1;
+        public static void AdicionarHistórico()
+        {
+            
+            historicoMusica.Add(Musica.id);
+            historicoIndex++;
+            
+            Conexao conexao = new Conexao();
 
+            using (NpgsqlConnection conn = conexao.Abrir())
+            {
+                conn.Open();
+                string query = @"
+            SELECT COUNT(*)
+            FROM historic
+            WHERE fk_id_user_historic = @UserId;
+        ";
 
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", User.id);
+
+                    int quantidade = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (quantidade >= 10)
+                    {
+                        string deleteQuery = @"
+                            DELETE FROM historic
+                            WHERE pk_id_historic = (
+                                SELECT pk_id_historic
+                                FROM historic
+                                WHERE fk_id_user_historic = @UserId
+                                ORDER BY pk_id_historic ASC
+                                LIMIT 1
+                            );
+                        ";
+
+                        using (NpgsqlCommand deleteCmd = new NpgsqlCommand(deleteQuery, conn))
+                        {
+                            deleteCmd.Parameters.AddWithValue("@UserId", User.id);
+                            deleteCmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    string insertQuery = @"
+                            INSERT INTO historic (music_id, fk_id_user_historic)
+                            VALUES (@MusicId, @UserId);
+                        ";
+
+                    using (NpgsqlCommand insertCmd = new NpgsqlCommand(insertQuery, conn))
+                    {
+                        insertCmd.Parameters.AddWithValue("@MusicId", Musica.id);
+                        insertCmd.Parameters.AddWithValue("@UserId", User.id);
+
+                        insertCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            
+        }
         private void tableLayoutPanel1_Paint(
             object sender,
             PaintEventArgs e)
@@ -2041,6 +2143,47 @@ namespace Projeto_da_feira
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             CriarPlaylist();
+        }
+
+        private void guna2CircleButton4_Click(object sender, EventArgs e)
+        {
+            historicbool = true;
+            if (historicoIndex < historicoMusica.Count - 1)
+            {
+                historicoIndex++;
+
+                Musica.id = historicoMusica[historicoIndex];
+                TocarMusica();
+            }
+        }
+
+        private void guna2CircleButton3_Click(object sender, EventArgs e)
+        {
+            historicbool = true;
+            if (historicoIndex >0)
+            {
+                historicoIndex--;
+                MessageBox.Show(historicoIndex.ToString());
+                Musica.id = historicoMusica[historicoIndex];
+                TocarMusica();
+            }
+        }
+        private void historicinvert()
+        {
+            if (historicbool){
+                int indice = historicoIndex;
+
+                while (indice > 0)
+                {
+                    historicoMusica.RemoveAt(0);
+                    indice--;
+                }
+                historicoMusica.Reverse();
+                historicoIndex = historicoMusica.Count - 1;
+
+                historicbool = false;
+            }
+            
         }
     }
 }

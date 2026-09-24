@@ -101,20 +101,61 @@ namespace Projeto_da_feira
                                 leitor.Close();
 
                                 // 1. Verifica se já existe a playlist "Curtidas" para este usuário
-                                string queryVerifica = "SELECT COUNT(*) FROM playlist WHERE fk_id_user_playlist = @IdUsuario AND nome_playlist = 'Curtidas'";
-                                using (var cmdVerifica = new NpgsqlCommand(queryVerifica, conexao))
-                                {
-                                    cmdVerifica.Parameters.AddWithValue("@IdUsuario", idUsuario);
-                                    long quantidade = (long)cmdVerifica.ExecuteScalar();
+                                // Verifica se existe a playlist "Curtidas"
+                                string queryVerificaCurtidas = @"
+                                        SELECT COUNT(*) 
+                                        FROM playlist 
+                                        WHERE fk_id_user_playlist = @IdUsuario 
+                                          AND nome_playlist = 'Curtidas'";
 
-                                    // 2. Se não existir (quantidade == 0), cria a playlist
-                                    if (quantidade == 0)
+                                using (var cmdVerificaCurtidas = new NpgsqlCommand(queryVerificaCurtidas, conexao))
+                                {
+                                    cmdVerificaCurtidas.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                                    long quantidadeCurtidas = (long)cmdVerificaCurtidas.ExecuteScalar();
+
+                                    if (quantidadeCurtidas == 0)
                                     {
-                                        string queryCria = "INSERT INTO playlist (music_playlist,nome_playlist, fk_id_user_playlist) VALUES (0,'Curtidas', @IdUsuario)";
-                                        using (var cmdCria = new NpgsqlCommand(queryCria, conexao))
+                                        string queryCriaCurtidas = @"
+                                            INSERT INTO playlist 
+                                                (music_playlist, nome_playlist, fk_id_user_playlist) 
+                                            VALUES 
+                                                (0, 'Curtidas', @IdUsuario)";
+
+                                        using (var cmdCriaCurtidas = new NpgsqlCommand(queryCriaCurtidas, conexao))
                                         {
-                                            cmdCria.Parameters.AddWithValue("@IdUsuario", idUsuario);
-                                            cmdCria.ExecuteNonQuery();
+                                            cmdCriaCurtidas.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                                            cmdCriaCurtidas.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+
+
+                                // Verifica se existe a playlist "Histórico"
+                                string queryVerificaHistorico = @"
+                                            SELECT COUNT(*) 
+                                            FROM playlist 
+                                            WHERE fk_id_user_playlist = @IdUsuario 
+                                              AND nome_playlist = 'Histórico'";
+
+                                using (var cmdVerificaHistorico = new NpgsqlCommand(queryVerificaHistorico, conexao))
+                                {
+                                    cmdVerificaHistorico.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                                    long quantidadeHistorico = (long)cmdVerificaHistorico.ExecuteScalar();
+
+                                    if (quantidadeHistorico == 0)
+                                    {
+                                        string queryCriaHistorico = @"
+                                        INSERT INTO playlist 
+                                            (music_playlist, nome_playlist, fk_id_user_playlist) 
+                                        VALUES 
+                                            (0, 'Histórico', @IdUsuario)";
+
+                                        using (var cmdCriaHistorico = new NpgsqlCommand(queryCriaHistorico, conexao))
+                                        {
+                                            cmdCriaHistorico.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                                            cmdCriaHistorico.ExecuteNonQuery();
                                         }
                                     }
                                 }

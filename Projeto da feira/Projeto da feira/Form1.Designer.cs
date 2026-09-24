@@ -39,20 +39,28 @@ namespace Projeto_da_feira
             this.Fpanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pesquisatxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.FplaylistCard1 = new Guna.UI2.WinForms.Guna2Panel();
             this.FBiblioteca = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.Display = new Guna.UI2.WinForms.Guna2Panel();
+            this.musicImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.lblMusicaNome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Display2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tempo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.duracao = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.titulolbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.imagembbar = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblMusicaNome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.volume = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -60,29 +68,23 @@ namespace Projeto_da_feira
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.playlistForm = new Guna.UI2.WinForms.Guna2Panel();
             this.formtable = new System.Windows.Forms.TableLayoutPanel();
-            this.musicImg = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.imagembbar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.duracao = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tempo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.Fpanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.FBiblioteca.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.Display.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.Display2.SuspendLayout();
-            this.formtable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.formtable.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -207,6 +209,39 @@ namespace Projeto_da_feira
             this.pesquisatxt.Size = new System.Drawing.Size(155, 40);
             this.pesquisatxt.TabIndex = 2;
             // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Image = global::Projeto_da_feira.Properties.Resources._87_872187_lupa_search_icon_white_png;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(7, 29);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(7);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(56, 56);
+            this.guna2CircleButton2.TabIndex = 3;
+            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.guna2PictureBox2, 2);
+            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::Projeto_da_feira.Properties.Resources.Logo;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(239, 16);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 4;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // FplaylistCard1
             // 
             this.FplaylistCard1.Location = new System.Drawing.Point(270, 2);
@@ -269,6 +304,19 @@ namespace Projeto_da_feira
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 7);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 66);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -329,6 +377,25 @@ namespace Projeto_da_feira
             this.Display.TabIndex = 999999999;
             this.Display.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Paint);
             // 
+            // musicImg
+            // 
+            this.musicImg.BackColor = System.Drawing.Color.Transparent;
+            this.musicImg.BorderRadius = 10;
+            this.musicImg.ImageRotate = 0F;
+            this.musicImg.Location = new System.Drawing.Point(79, -315);
+            this.musicImg.Name = "musicImg";
+            this.musicImg.ShadowDecoration.BorderRadius = 30;
+            this.musicImg.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
+            this.musicImg.ShadowDecoration.Depth = 3;
+            this.musicImg.ShadowDecoration.Enabled = true;
+            this.musicImg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
+            this.musicImg.Size = new System.Drawing.Size(400, 400);
+            this.musicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.musicImg.TabIndex = 0;
+            this.musicImg.TabStop = false;
+            this.musicImg.UseTransparentBackground = true;
+            this.musicImg.Visible = false;
+            // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
@@ -339,22 +406,11 @@ namespace Projeto_da_feira
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.Visible = false;
             // 
-            // lblMusicaNome
-            // 
-            this.lblMusicaNome.AutoSize = false;
-            this.lblMusicaNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblMusicaNome.Font = new System.Drawing.Font("Inter SemiBold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMusicaNome.Location = new System.Drawing.Point(662, 53);
-            this.lblMusicaNome.Name = "lblMusicaNome";
-            this.lblMusicaNome.Size = new System.Drawing.Size(400, 87);
-            this.lblMusicaNome.TabIndex = 101;
-            this.lblMusicaNome.Text = "a";
-            this.lblMusicaNome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblMusicaNome.Visible = false;
-            // 
             // Display2
             // 
             this.Display2.BackColor = System.Drawing.Color.Transparent;
+            this.Display2.Controls.Add(this.guna2CircleButton4);
+            this.Display2.Controls.Add(this.guna2CircleButton3);
             this.Display2.Controls.Add(this.tempo);
             this.Display2.Controls.Add(this.duracao);
             this.Display2.Controls.Add(this.titulolbl);
@@ -370,6 +426,30 @@ namespace Projeto_da_feira
             this.Display2.Size = new System.Drawing.Size(1336, 171);
             this.Display2.TabIndex = 103;
             // 
+            // tempo
+            // 
+            this.tempo.AutoSize = false;
+            this.tempo.BackColor = System.Drawing.Color.Transparent;
+            this.tempo.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempo.ForeColor = System.Drawing.Color.White;
+            this.tempo.Location = new System.Drawing.Point(985, 120);
+            this.tempo.Name = "tempo";
+            this.tempo.Size = new System.Drawing.Size(101, 42);
+            this.tempo.TabIndex = 106;
+            this.tempo.Text = "0:00";
+            // 
+            // duracao
+            // 
+            this.duracao.AutoSize = false;
+            this.duracao.BackColor = System.Drawing.Color.Transparent;
+            this.duracao.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duracao.ForeColor = System.Drawing.Color.White;
+            this.duracao.Location = new System.Drawing.Point(1005, 53);
+            this.duracao.Name = "duracao";
+            this.duracao.Size = new System.Drawing.Size(81, 32);
+            this.duracao.TabIndex = 105;
+            this.duracao.Text = "0:29";
+            // 
             // titulolbl
             // 
             this.titulolbl.AutoSize = false;
@@ -382,6 +462,37 @@ namespace Projeto_da_feira
             this.titulolbl.Text = null;
             this.titulolbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.titulolbl.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            // 
+            // imagembbar
+            // 
+            this.imagembbar.BackColor = System.Drawing.Color.Transparent;
+            this.imagembbar.BorderRadius = 10;
+            this.imagembbar.FillColor = System.Drawing.Color.Transparent;
+            this.imagembbar.ImageRotate = 0F;
+            this.imagembbar.Location = new System.Drawing.Point(29, 64);
+            this.imagembbar.Name = "imagembbar";
+            this.imagembbar.ShadowDecoration.BorderRadius = 30;
+            this.imagembbar.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
+            this.imagembbar.ShadowDecoration.Depth = 3;
+            this.imagembbar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
+            this.imagembbar.Size = new System.Drawing.Size(81, 76);
+            this.imagembbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagembbar.TabIndex = 104;
+            this.imagembbar.TabStop = false;
+            this.imagembbar.UseTransparentBackground = true;
+            // 
+            // lblMusicaNome
+            // 
+            this.lblMusicaNome.AutoSize = false;
+            this.lblMusicaNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblMusicaNome.Font = new System.Drawing.Font("Inter SemiBold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMusicaNome.Location = new System.Drawing.Point(662, 53);
+            this.lblMusicaNome.Name = "lblMusicaNome";
+            this.lblMusicaNome.Size = new System.Drawing.Size(400, 87);
+            this.lblMusicaNome.TabIndex = 101;
+            this.lblMusicaNome.Text = "a";
+            this.lblMusicaNome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMusicaNome.Visible = false;
             // 
             // volume
             // 
@@ -396,6 +507,29 @@ namespace Projeto_da_feira
             this.volume.TabIndex = 102;
             this.volume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
             this.volume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar2_Scroll);
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::Projeto_da_feira.Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
+            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, -2);
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(631, 28);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(63, 56);
+            this.guna2CircleButton1.TabIndex = 1;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // guna2TrackBar1
             // 
@@ -462,135 +596,51 @@ namespace Projeto_da_feira
             this.formtable.Size = new System.Drawing.Size(1342, 733);
             this.formtable.TabIndex = 1000000001;
             // 
-            // musicImg
+            // guna2CircleButton3
             // 
-            this.musicImg.BackColor = System.Drawing.Color.Transparent;
-            this.musicImg.BorderRadius = 10;
-            this.musicImg.ImageRotate = 0F;
-            this.musicImg.Location = new System.Drawing.Point(79, -315);
-            this.musicImg.Name = "musicImg";
-            this.musicImg.ShadowDecoration.BorderRadius = 30;
-            this.musicImg.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
-            this.musicImg.ShadowDecoration.Depth = 3;
-            this.musicImg.ShadowDecoration.Enabled = true;
-            this.musicImg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
-            this.musicImg.Size = new System.Drawing.Size(400, 400);
-            this.musicImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.musicImg.TabIndex = 0;
-            this.musicImg.TabStop = false;
-            this.musicImg.UseTransparentBackground = true;
-            this.musicImg.Visible = false;
+            this.guna2CircleButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton3.Image = global::Projeto_da_feira.Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
+            this.guna2CircleButton3.ImageOffset = new System.Drawing.Point(1, -2);
+            this.guna2CircleButton3.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(562, 28);
+            this.guna2CircleButton3.Name = "guna2CircleButton3";
+            this.guna2CircleButton3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton3.Size = new System.Drawing.Size(63, 56);
+            this.guna2CircleButton3.TabIndex = 107;
+            this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
             // 
-            // imagembbar
+            // guna2CircleButton4
             // 
-            this.imagembbar.BackColor = System.Drawing.Color.Transparent;
-            this.imagembbar.BorderRadius = 10;
-            this.imagembbar.FillColor = System.Drawing.Color.Transparent;
-            this.imagembbar.ImageRotate = 0F;
-            this.imagembbar.Location = new System.Drawing.Point(29, 64);
-            this.imagembbar.Name = "imagembbar";
-            this.imagembbar.ShadowDecoration.BorderRadius = 30;
-            this.imagembbar.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
-            this.imagembbar.ShadowDecoration.Depth = 3;
-            this.imagembbar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(13);
-            this.imagembbar.Size = new System.Drawing.Size(81, 76);
-            this.imagembbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagembbar.TabIndex = 104;
-            this.imagembbar.TabStop = false;
-            this.imagembbar.UseTransparentBackground = true;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::Projeto_da_feira.Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
-            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, -2);
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(631, 28);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(63, 56);
-            this.guna2CircleButton1.TabIndex = 1;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Image = global::Projeto_da_feira.Properties.Resources._87_872187_lupa_search_icon_white_png;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(7, 29);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(56, 56);
-            this.guna2CircleButton2.TabIndex = 3;
-            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.guna2PictureBox2, 2);
-            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::Projeto_da_feira.Properties.Resources.Logo;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(239, 16);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 4;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 7);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 66);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
-            // duracao
-            // 
-            this.duracao.AutoSize = false;
-            this.duracao.BackColor = System.Drawing.Color.Transparent;
-            this.duracao.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.duracao.ForeColor = System.Drawing.Color.White;
-            this.duracao.Location = new System.Drawing.Point(1005, 53);
-            this.duracao.Name = "duracao";
-            this.duracao.Size = new System.Drawing.Size(81, 32);
-            this.duracao.TabIndex = 105;
-            this.duracao.Text = "0:29";
-            // 
-            // tempo
-            // 
-            this.tempo.AutoSize = false;
-            this.tempo.BackColor = System.Drawing.Color.Transparent;
-            this.tempo.Font = new System.Drawing.Font("Inter SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempo.ForeColor = System.Drawing.Color.White;
-            this.tempo.Location = new System.Drawing.Point(985, 120);
-            this.tempo.Name = "tempo";
-            this.tempo.Size = new System.Drawing.Size(101, 42);
-            this.tempo.TabIndex = 106;
-            this.tempo.Text = "0:00";
+            this.guna2CircleButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton4.Image = global::Projeto_da_feira.Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
+            this.guna2CircleButton4.ImageOffset = new System.Drawing.Point(1, -2);
+            this.guna2CircleButton4.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2CircleButton4.Location = new System.Drawing.Point(701, 28);
+            this.guna2CircleButton4.Name = "guna2CircleButton4";
+            this.guna2CircleButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
+            this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton4.Size = new System.Drawing.Size(63, 56);
+            this.guna2CircleButton4.TabIndex = 108;
+            this.guna2CircleButton4.Click += new System.EventHandler(this.guna2CircleButton4_Click);
             // 
             // Form1
             // 
@@ -613,19 +663,19 @@ namespace Projeto_da_feira
             this.tableLayoutPanel1.ResumeLayout(false);
             this.Fpanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.FBiblioteca.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.Display.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.Display2.ResumeLayout(false);
-            this.formtable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.musicImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagembbar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.formtable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -669,6 +719,8 @@ namespace Projeto_da_feira
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel tempo;
         private Guna.UI2.WinForms.Guna2HtmlLabel duracao;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
     }
 }
 
