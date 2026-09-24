@@ -103,7 +103,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel1.Controls.Add(this.FBiblioteca, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 97);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -119,7 +119,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(202, 90);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(798, 261);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -128,7 +128,7 @@ namespace Projeto_da_feira
             // FplaylistCard2
             // 
             this.FplaylistCard2.Location = new System.Drawing.Point(202, 46);
-            this.FplaylistCard2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FplaylistCard2.Margin = new System.Windows.Forms.Padding(2);
             this.FplaylistCard2.Name = "FplaylistCard2";
             this.FplaylistCard2.Size = new System.Drawing.Size(150, 8);
             this.FplaylistCard2.TabIndex = 1;
@@ -137,7 +137,7 @@ namespace Projeto_da_feira
             // FplaylistCard4
             // 
             this.FplaylistCard4.Location = new System.Drawing.Point(579, 46);
-            this.FplaylistCard4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FplaylistCard4.Margin = new System.Windows.Forms.Padding(2);
             this.FplaylistCard4.Name = "FplaylistCard4";
             this.FplaylistCard4.Size = new System.Drawing.Size(150, 8);
             this.FplaylistCard4.TabIndex = 2;
@@ -145,7 +145,7 @@ namespace Projeto_da_feira
             // FplaylistCard3
             // 
             this.FplaylistCard3.Location = new System.Drawing.Point(579, 2);
-            this.FplaylistCard3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FplaylistCard3.Margin = new System.Windows.Forms.Padding(2);
             this.FplaylistCard3.Name = "FplaylistCard3";
             this.FplaylistCard3.Size = new System.Drawing.Size(150, 8);
             this.FplaylistCard3.TabIndex = 2;
@@ -155,7 +155,7 @@ namespace Projeto_da_feira
             // 
             this.Fpanel1.Controls.Add(this.tableLayoutPanel2);
             this.Fpanel1.Location = new System.Drawing.Point(2, 2);
-            this.Fpanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fpanel1.Margin = new System.Windows.Forms.Padding(2);
             this.Fpanel1.Name = "Fpanel1";
             this.Fpanel1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.SetRowSpan(this.Fpanel1, 2);
@@ -173,7 +173,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel2.Controls.Add(this.guna2PictureBox2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 5);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -237,7 +237,7 @@ namespace Projeto_da_feira
             this.guna2PictureBox2.Image = global::Projeto_da_feira.Properties.Resources.Design_sem_nome__1_;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(2, 2);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(181, 13);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +247,7 @@ namespace Projeto_da_feira
             // FplaylistCard1
             // 
             this.FplaylistCard1.Location = new System.Drawing.Point(202, 2);
-            this.FplaylistCard1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FplaylistCard1.Margin = new System.Windows.Forms.Padding(2);
             this.FplaylistCard1.Name = "FplaylistCard1";
             this.FplaylistCard1.Size = new System.Drawing.Size(150, 8);
             this.FplaylistCard1.TabIndex = 0;
@@ -256,7 +256,7 @@ namespace Projeto_da_feira
             // 
             this.FBiblioteca.Controls.Add(this.tableLayoutPanel3);
             this.FBiblioteca.Location = new System.Drawing.Point(2, 90);
-            this.FBiblioteca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FBiblioteca.Margin = new System.Windows.Forms.Padding(2);
             this.FBiblioteca.Name = "FBiblioteca";
             this.FBiblioteca.Size = new System.Drawing.Size(176, 261);
             this.FBiblioteca.TabIndex = 4;
@@ -271,7 +271,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -288,7 +288,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel4.Controls.Add(this.guna2PictureBox1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 193);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -301,7 +301,7 @@ namespace Projeto_da_feira
             this.guna2HtmlLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(54, 2);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(116, 62);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -331,7 +331,7 @@ namespace Projeto_da_feira
             this.tableLayoutPanel5.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -345,9 +345,9 @@ namespace Projeto_da_feira
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(123, 183);
             this.flowLayoutPanel2.TabIndex = 0;
             this.flowLayoutPanel2.WrapContents = false;
@@ -364,7 +364,7 @@ namespace Projeto_da_feira
             this.guna2Button2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Location = new System.Drawing.Point(129, 2);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Size = new System.Drawing.Size(34, 37);
@@ -380,7 +380,7 @@ namespace Projeto_da_feira
             this.Display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Display.FillColor = System.Drawing.Color.Gray;
             this.Display.Location = new System.Drawing.Point(2, 454);
-            this.Display.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Display.Margin = new System.Windows.Forms.Padding(2);
             this.Display.Name = "Display";
             this.Display.Size = new System.Drawing.Size(1002, 140);
             this.Display.TabIndex = 999999999;
@@ -392,7 +392,7 @@ namespace Projeto_da_feira
             this.musicImg.BorderRadius = 10;
             this.musicImg.ImageRotate = 0F;
             this.musicImg.Location = new System.Drawing.Point(59, -256);
-            this.musicImg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.musicImg.Margin = new System.Windows.Forms.Padding(2);
             this.musicImg.Name = "musicImg";
             this.musicImg.ShadowDecoration.BorderRadius = 30;
             this.musicImg.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
@@ -410,7 +410,7 @@ namespace Projeto_da_feira
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 5);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(41, 34);
@@ -433,7 +433,7 @@ namespace Projeto_da_feira
             this.Display2.Controls.Add(this.guna2Button1);
             this.Display2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Display2.Location = new System.Drawing.Point(0, 0);
-            this.Display2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Display2.Margin = new System.Windows.Forms.Padding(2);
             this.Display2.Name = "Display2";
             this.Display2.Size = new System.Drawing.Size(1002, 140);
             this.Display2.TabIndex = 103;
@@ -454,7 +454,7 @@ namespace Projeto_da_feira
             this.guna2CircleButton4.ImageOffset = new System.Drawing.Point(1, -2);
             this.guna2CircleButton4.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2CircleButton4.Location = new System.Drawing.Point(526, 24);
-            this.guna2CircleButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton4.Name = "guna2CircleButton4";
             this.guna2CircleButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
             this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -478,7 +478,7 @@ namespace Projeto_da_feira
             this.guna2CircleButton3.ImageOffset = new System.Drawing.Point(1, -2);
             this.guna2CircleButton3.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2CircleButton3.Location = new System.Drawing.Point(422, 24);
-            this.guna2CircleButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton3.Name = "guna2CircleButton3";
             this.guna2CircleButton3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
             this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -493,7 +493,7 @@ namespace Projeto_da_feira
             this.tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempo.ForeColor = System.Drawing.Color.White;
             this.tempo.Location = new System.Drawing.Point(739, 98);
-            this.tempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tempo.Margin = new System.Windows.Forms.Padding(2);
             this.tempo.Name = "tempo";
             this.tempo.Size = new System.Drawing.Size(76, 34);
             this.tempo.TabIndex = 106;
@@ -506,7 +506,7 @@ namespace Projeto_da_feira
             this.duracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.duracao.ForeColor = System.Drawing.Color.White;
             this.duracao.Location = new System.Drawing.Point(754, 43);
-            this.duracao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.duracao.Margin = new System.Windows.Forms.Padding(2);
             this.duracao.Name = "duracao";
             this.duracao.Size = new System.Drawing.Size(61, 26);
             this.duracao.TabIndex = 105;
@@ -518,7 +518,7 @@ namespace Projeto_da_feira
             this.titulolbl.BackColor = System.Drawing.Color.Transparent;
             this.titulolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulolbl.Location = new System.Drawing.Point(74, 55);
-            this.titulolbl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.titulolbl.Margin = new System.Windows.Forms.Padding(2);
             this.titulolbl.Name = "titulolbl";
             this.titulolbl.Size = new System.Drawing.Size(300, 62);
             this.titulolbl.TabIndex = 104;
@@ -533,7 +533,7 @@ namespace Projeto_da_feira
             this.imagembbar.FillColor = System.Drawing.Color.Transparent;
             this.imagembbar.ImageRotate = 0F;
             this.imagembbar.Location = new System.Drawing.Point(22, 52);
-            this.imagembbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imagembbar.Margin = new System.Windows.Forms.Padding(2);
             this.imagembbar.Name = "imagembbar";
             this.imagembbar.ShadowDecoration.BorderRadius = 30;
             this.imagembbar.ShadowDecoration.Color = System.Drawing.Color.DarkSlateBlue;
@@ -550,8 +550,8 @@ namespace Projeto_da_feira
             this.lblMusicaNome.AutoSize = false;
             this.lblMusicaNome.BackColor = System.Drawing.Color.Transparent;
             this.lblMusicaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMusicaNome.Location = new System.Drawing.Point(496, 43);
-            this.lblMusicaNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblMusicaNome.Location = new System.Drawing.Point(526, 23);
+            this.lblMusicaNome.Margin = new System.Windows.Forms.Padding(2);
             this.lblMusicaNome.Name = "lblMusicaNome";
             this.lblMusicaNome.Size = new System.Drawing.Size(300, 71);
             this.lblMusicaNome.TabIndex = 101;
@@ -565,7 +565,7 @@ namespace Projeto_da_feira
             this.volume.BackColor = System.Drawing.Color.Transparent;
             this.volume.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volume.Location = new System.Drawing.Point(784, -4);
-            this.volume.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.volume.Margin = new System.Windows.Forms.Padding(2);
             this.volume.Name = "volume";
             this.volume.Size = new System.Drawing.Size(228, 3);
             this.volume.SmallChange = 4;
@@ -590,7 +590,7 @@ namespace Projeto_da_feira
             this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, -2);
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2CircleButton1.Location = new System.Drawing.Point(473, 24);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(94)))), ((int)(((byte)(181)))));
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -605,7 +605,7 @@ namespace Projeto_da_feira
             this.guna2TrackBar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TrackBar1.FillColor = System.Drawing.Color.Silver;
             this.guna2TrackBar1.Location = new System.Drawing.Point(525, 115);
-            this.guna2TrackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2TrackBar1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TrackBar1.Name = "guna2TrackBar1";
             this.guna2TrackBar1.Size = new System.Drawing.Size(480, 3);
             this.guna2TrackBar1.SmallChange = 0;
@@ -625,7 +625,7 @@ namespace Projeto_da_feira
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(848, 25);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(40, 36);
             this.guna2Button1.TabIndex = 3;
@@ -643,7 +643,7 @@ namespace Projeto_da_feira
             this.playlistForm.BackColor = System.Drawing.Color.DarkGray;
             this.playlistForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playlistForm.Location = new System.Drawing.Point(2, 2);
-            this.playlistForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playlistForm.Margin = new System.Windows.Forms.Padding(2);
             this.playlistForm.Name = "playlistForm";
             this.playlistForm.Size = new System.Drawing.Size(1002, 91);
             this.playlistForm.TabIndex = 1000000000;
@@ -658,7 +658,7 @@ namespace Projeto_da_feira
             this.formtable.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.formtable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formtable.Location = new System.Drawing.Point(0, 0);
-            this.formtable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formtable.Margin = new System.Windows.Forms.Padding(2);
             this.formtable.Name = "formtable";
             this.formtable.RowCount = 3;
             this.formtable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.99768F));
@@ -677,7 +677,7 @@ namespace Projeto_da_feira
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

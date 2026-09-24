@@ -487,7 +487,7 @@ namespace Projeto_da_feira
             panel.Height = 85;
 
             // Espaço externo entre cards (esq, topo, dir, base).
-            panel.Margin = new Padding(5, 30, 5, 2);
+            panel.Margin = new Padding(5, 15, 5, 0);
 
             // Espaço interno do painel (esq, topo, dir, base).
             panel.Padding = new Padding(0, 2, 50, 2);
@@ -738,7 +738,7 @@ namespace Projeto_da_feira
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
