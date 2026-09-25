@@ -320,7 +320,7 @@ namespace Projeto_da_feira
         // CONSTRUTOR — chamado pelo Form pai ao abrir a tela de uma playlist
         // Parâmetros: nome da playlist, id, lista de ids do Deezer das músicas e URL da capa.
         // =============================================================================
-        public Form_Playlist(string nome, long id, List<long> musicas, string imagem)
+        public Form_Playlist(string nome, long id, List<PlaylistMusic> musicas, string imagem)
         {
             // Cria todos os controles desenhados no editor visual (Designer).
             InitializeComponent();
@@ -402,12 +402,12 @@ namespace Projeto_da_feira
             public static string nome;          // Nome da playlist
             public static long id;              // ID da playlist (no seu banco)
 
-            public static List<long> musicas;   // IDs das músicas (IDs do Deezer)
+            public static List<Form1.PlaylistMusic> musicas = new List<Form1.PlaylistMusic>();   // IDs das músicas (IDs do Deezer)
 
             public static string imagem;        // URL da capa da playlist
 
         }
-
+        
         // =============================================================================
         // CLASSE ESTÁTICA Cores — paleta de cores do tema escuro do aplicativo
         // =============================================================================
@@ -444,10 +444,10 @@ namespace Projeto_da_feira
         private async void CarregarMusicas()
         {
             // Percorre cada id de música da playlist, em ordem.
-            foreach (long idMusica in Playlist.musicas)
+            foreach (PlaylistMusic idMusica in Playlist.musicas)
             {
                 // Consulta a API do Deezer (uma requisição por música, em sequência).
-                JObject musica = await deezer.BuscarMusica(idMusica);
+                JObject musica = await deezer.BuscarMusica(idMusica.Id);
 
                 // Extrai os campos do JSON:
                 long id = (long)musica["id"];                                  // id da faixa
@@ -457,7 +457,7 @@ namespace Projeto_da_feira
                 string imagem = musica["album"]["cover_medium"].ToString();    // URL da capa (tamanho médio)
 
                 // Cria um novo controle de música e adiciona ao FlowLayoutPanel.
-                CardMusica(id, titulo, artista, album, imagem);
+                CardMusica(Playlist.musicas.IndexOf(idMusica), id, titulo, artista, album, imagem);
 
             }
         }
@@ -472,7 +472,7 @@ namespace Projeto_da_feira
         // O parâmetro "duracao" tem valor padrão fixo "0.29" (não vem da API; o Deezer
         // retorna o campo "duration" em segundos, que poderia ser formatado mm:ss).
         // =============================================================================
-        private void CardMusica(long id, string titulo, string artista, string album, string imagem, string duracao = "0.29")
+        private void CardMusica(int index,long id, string titulo, string artista, string album, string imagem, string duracao = "0.29")
         {
             // Painel externo do card (fundo arredondado).
             Guna2Panel panel = new Guna2Panel();
@@ -579,15 +579,19 @@ namespace Projeto_da_feira
             // Executada quando o usuário clica em qualquer parte do card.
             void CliqueCard(object sender, EventArgs e)
             {
+                Form1.PlaylisAtivada = true;
+                Form1.PlaylistIndex = index;
+                Form1.Playlistlist = Playlist.musicas;
                 idMusicaAtual = id;                                // Registra qual música foi clicada
-                nome = titulo;                                     // Registra o título
-                url = imagem;                                      // Registra a capa
+                nome = ""+titulo;                                     // Registra o título
+                url = imagem;
                 tocarmusica?.Invoke(this, EventArgs.Empty);        // Avisa o Form pai (só se houver assinante)
             }
+              
 
-            // O clique precisa ser ligado em CADA controle, pois os filhos "cobrem" o painel
-            // e recebem o clique no lugar dele.
-            panel.Click += CliqueCard;
+        // O clique precisa ser ligado em CADA controle, pois os filhos "cobrem" o painel
+        // e recebem o clique no lugar dele.
+        panel.Click += CliqueCard;
             grid.Click += CliqueCard;
             labelNome.Click += CliqueCard;
             labelArtist.Click += CliqueCard;
@@ -626,6 +630,7 @@ namespace Projeto_da_feira
         // ObterCorPredominanteAsync — calcula a COR MÉDIA de uma imagem da web
         // Retorna Color.Black se a URL for vazia ou se ocorrer erro.
         // =============================================================================
+        
         public async Task<Color> ObterCorPredominanteAsync(string urlImagem)
         {
             // Se não há URL, devolve preto imediatamente.
@@ -708,10 +713,7 @@ namespace Projeto_da_feira
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             // Avisa o pai (só se alguém estiver ouvindo o evento).
-            BotaoFoiClicado?.Invoke(this, EventArgs.Empty);
-
-            // Fecha esta janela.
-            this.Close();
+           
         }
 
         // Handlers abaixo: vazios, gerados pelo designer ao clicar duas vezes nos controles.
@@ -738,7 +740,10 @@ namespace Projeto_da_feira
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            
+            BotaoFoiClicado?.Invoke(this, EventArgs.Empty);
+
+            // Fecha esta janela.
+            this.Close();
         }
     }
 }

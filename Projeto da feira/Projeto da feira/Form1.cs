@@ -16,6 +16,7 @@ using System.Net.Http;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -108,7 +109,7 @@ namespace Projeto_da_feira
             startGraph();
 
             CarregarMusicas(pesquisatxt.Text);
-            CarregarBiblioteca();
+
         }
 
 
@@ -130,42 +131,42 @@ namespace Projeto_da_feira
         }
 
         public Color ObterCorPredominante(string caminhoImagem)
-{
-    using (Bitmap bitmap = new Bitmap(caminhoImagem))
-    {
-        long rTotal = 0;
-        long gTotal = 0;
-        long bTotal = 0;
-        long totalPixels = 0;
-
-        // Percorre a imagem (dica: para imagens grandes, pular de X em X pixels otimiza bastante)
-        for (int x = 0; x < bitmap.Width; x += 5)
         {
-            for (int y = 0; y < bitmap.Height; y += 5)
+            using (Bitmap bitmap = new Bitmap(caminhoImagem))
             {
-                Color corPixel = bitmap.GetPixel(x, y);
+                long rTotal = 0;
+                long gTotal = 0;
+                long bTotal = 0;
+                long totalPixels = 0;
 
-                // Ignora pixels muito transparentes se houver canal alpha
-                if (corPixel.A > 10)
+                // Percorre a imagem (dica: para imagens grandes, pular de X em X pixels otimiza bastante)
+                for (int x = 0; x < bitmap.Width; x += 5)
                 {
-                    rTotal += corPixel.R;
-                    gTotal += corPixel.G;
-                    bTotal += corPixel.B;
-                    totalPixels++;
+                    for (int y = 0; y < bitmap.Height; y += 5)
+                    {
+                        Color corPixel = bitmap.GetPixel(x, y);
+
+                        // Ignora pixels muito transparentes se houver canal alpha
+                        if (corPixel.A > 10)
+                        {
+                            rTotal += corPixel.R;
+                            gTotal += corPixel.G;
+                            bTotal += corPixel.B;
+                            totalPixels++;
+                        }
+                    }
                 }
+
+                if (totalPixels == 0) return Color.Black;
+
+                // Calcula a média das cores
+                int mediaR = (int)(rTotal / totalPixels);
+                int mediaG = (int)(gTotal / totalPixels);
+                int mediaB = (int)(bTotal / totalPixels);
+
+                return Color.FromArgb(mediaR, mediaG, mediaB);
             }
         }
-
-        if (totalPixels == 0) return Color.Black;
-
-        // Calcula a média das cores
-        int mediaR = (int)(rTotal / totalPixels);
-        int mediaG = (int)(gTotal / totalPixels);
-        int mediaB = (int)(bTotal / totalPixels);
-
-        return Color.FromArgb(mediaR, mediaG, mediaB);
-    }
-}
         public static class Preferences
         {
             public static bool darkMode = true;
@@ -387,7 +388,7 @@ namespace Projeto_da_feira
         public class Conexao
         {
             private string connectionString =
-                "Host=aws-0-sa-east-1.pooler.supabase.com;"+
+                "Host=aws-0-sa-east-1.pooler.supabase.com;" +
                 "Database=postgres;" +
                 "Username=postgres.zjlnoxudmxjanibkptpf;" +
                 "Password=reuna6genins;" +
@@ -404,6 +405,7 @@ namespace Projeto_da_feira
 
         private async Task CarregarBiblioteca()
         {
+            flowLayoutPanel2.Controls.Clear();
             long id = 0;
             string nome = "";
 
@@ -452,17 +454,20 @@ namespace Projeto_da_feira
                             {
                                 id = reader.GetInt64(reader.GetOrdinal("id_playlist"));
                                 nome = reader["nome_playlist"].ToString();
-                                
+                                if(nome == "Curtidas")
+                                {
+                                    curtirId = id;
+                                }
                                 // ID da última música (usado para buscar a imagem de capa)
                                 long idMusicUltima = reader.GetInt64(reader.GetOrdinal("music_playlist"));
-                          
+
                                 string urlCapa = await imagemMusica(idMusicUltima);
 
                                 // 1. AQUI ESTÁ A LISTA: Pega todas as músicas que possuem esse mesmo id_playlist
-                                List<long> todasAsMusicasDaPlaylist = await ObterMusicasDaPlaylistAsync(id,nome);
+                                List<PlaylistMusic> todasAsMusicasDaPlaylist = await ObterMusicasDaPlaylistAsync(id, nome,urlCapa);
 
                                 // 2. Passa os dados para o card (pode ajustar o CardPlaylist para receber a lista se precisar dela lá dentro)
-                                CardPlaylist(id, nome, urlCapa,todasAsMusicasDaPlaylist);
+                                CardPlaylist(id, nome, urlCapa, todasAsMusicasDaPlaylist);
                             }
                         }
                     }
@@ -475,9 +480,9 @@ namespace Projeto_da_feira
         }
 
         // Método auxiliar que busca todas as músicas daquele id_playlist em ordem de inserção
-        private async Task<List<long>> ObterMusicasDaPlaylistAsync(long idPlaylist , string nome)
+        private async Task<List<PlaylistMusic>> ObterMusicasDaPlaylistAsync(long idPlaylist, string nome ,string cover)
         {
-            List<long> listaMusicas = new List<long>();
+            List<PlaylistMusic> listaMusicas = new List<PlaylistMusic>();
             try
             {
                 using (NpgsqlConnection conn = conexao.Abrir())
@@ -513,7 +518,7 @@ namespace Projeto_da_feira
                         }
                         else
                         {
-                          
+
                             cmd.Parameters.AddWithValue("@UserId", User.id);
                         }
 
@@ -534,8 +539,14 @@ namespace Projeto_da_feira
                                     idMusica = reader.GetInt64(
                                         reader.GetOrdinal("music_id"));
                                 }
+                                
 
-                                listaMusicas.Add(idMusica);
+                                listaMusicas.Add(new PlaylistMusic
+                                {
+                                    Id = idMusica,
+                                    name = nome,
+                                    cover = cover
+                                });
                             }
                         }
                     }
@@ -558,7 +569,7 @@ namespace Projeto_da_feira
                 if (resultado != null && resultado["album"] != null)
                 {
                     string coverUrl = (string)resultado["album"]["cover_medium"];
-                    
+
                     return coverUrl ?? string.Empty;
                 }
             }
@@ -569,8 +580,40 @@ namespace Projeto_da_feira
 
             return "https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/music-player-playlist-round-black-icon.png";
         }
+        private async Task<string> nomeMusica(long id)
+        {
+            try
+            {
+                JObject resultado = await req.BuscarMusica(id);
 
-        private void CardPlaylist(long id, string nome, string imagem, List<long> musicas)
+                if (resultado != null)
+                {
+                    string coverUrl = (string)resultado["tittle"];
+
+                    return coverUrl ?? string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Erro ao extrair imagem: " + ex.Message);
+            }
+
+            return "https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/music-player-playlist-round-black-icon.png";
+        }
+        private async Task atualizarPlaylistlist()
+        {
+            // Garante que percorre item por item da lista original de forma sequencial e segura
+            for (int i = 0; i < Playlistlist.Count; i++)
+            {
+                var musica = Playlistlist[i];
+
+                // O 'await' aqui pausa o loop especificamente nesta música 
+                // até que a API do Deezer retorne o nome e a imagem dela
+                musica.name = await nomeMusica(musica.Id);
+                musica.cover = await imagemMusica(musica.Id);
+            }
+        }
+        private void CardPlaylist(long id, string nome, string imagem, List<PlaylistMusic> musicas)
         {
             Guna2Panel panel = new Guna2Panel();
             panel.Name = "Fplaylist" + id;
@@ -600,7 +643,7 @@ namespace Projeto_da_feira
             picBox.Width = 55;
             picBox.Height = 55;
             picBox.Margin = new Padding(3);
-            
+
 
             // MUDANÇA PRINCIPAL: Usar Zoom para evitar distorção da imagem
             picBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -622,7 +665,8 @@ namespace Projeto_da_feira
             labelNome.BackColor = Color.Transparent;
 
             // === 3. ADICIONANDO O EVENTO DE CLIQUE EM TUDO USANDO LAMBDA ===
-            void AcaoClique(object sender, EventArgs e) => Abrirplaylist(nome, id, musicas, imagem);
+            // === 3. ADICIONANDO O EVENTO DE CLIQUE EM TUDO USANDO LAMBDA ASSÍNCRONA ===
+            EventHandler AcaoClique = async (sender, e) => await Abrirplaylist(nome, id, musicas, imagem);
 
             panel.Click += AcaoClique;
             tableLayoutPanel.Click += AcaoClique;
@@ -636,14 +680,14 @@ namespace Projeto_da_feira
             panel.Controls.Add(tableLayoutPanel);
             flowLayoutPanel2.Controls.Add(panel);
         }
-
+        public static long curtirId;
         public static class telaAtual
         {
             public static int tela = 1;
         }
 
         // Exemplo da sua função que recebe o ID
-        private async Task Abrirplaylist(string nome, long id, List<long> id2, string url)
+        private async Task Abrirplaylist(string nome, long id, List<PlaylistMusic> id2, string url)
         {
             // 1. Limpa os formulários anteriores de dentro do painel para não sobrepor
             foreach (Control control in playlistForm.Controls)
@@ -655,7 +699,7 @@ namespace Projeto_da_feira
                 }
             }
             playlistForm.Controls.Clear();
-
+            await atualizarPlaylistlist();
             // 2. Instancia o novo formulário da playlist (evite usar o mesmo nome do painel para a variável)
             Form_Playlist playlistFormInstance = new Form_Playlist(nome, id, id2, url);
 
@@ -679,6 +723,7 @@ namespace Projeto_da_feira
                 Musica.id = playlistFormInstance.idMusicaAtual;
                 Musica.nome = playlistFormInstance.nome;
                 Musica.cover = playlistFormInstance.url;
+                AdicionarHistórico();
                 TocarMusica();
             };
             // Adiciona o formulário dentro do painel e o exibe
@@ -695,6 +740,7 @@ namespace Projeto_da_feira
                 formtable.RowStyles[1].Height = 85f;
                 formtable.RowStyles[2].SizeType = SizeType.Percent;
                 formtable.RowStyles[2].Height = 15f;
+                CarregarBiblioteca();
 
             }
             else
@@ -706,8 +752,8 @@ namespace Projeto_da_feira
                 formtable.RowStyles[2].SizeType = SizeType.Percent;
                 formtable.RowStyles[2].Height = 15f;
             }
-            
-            
+
+
         }
         private void Form1_KeyPress(
             object sender,
@@ -724,7 +770,7 @@ namespace Projeto_da_feira
             }
         }
 
-  
+
         private void Card(Control container)
         {
             foreach (Control controle
@@ -739,7 +785,7 @@ namespace Projeto_da_feira
                 {
                     panel.Dock =
                         DockStyle.Fill;
-                
+
                     panel.BorderThickness = 0
                         ;
                     panel.BorderColor =
@@ -751,7 +797,7 @@ namespace Projeto_da_feira
                         Cores.FundoSecundario;
 
                     panel.BorderRadius = 10;
-                   
+
                 }
                 else if (controle.HasChildren)
                 {
@@ -818,6 +864,10 @@ namespace Projeto_da_feira
         }
         bool historicbool = false;
 
+        // Controle de mute
+        bool musicaMutada = false;
+        int volumeAntesDoMute = 0;
+
         private void CriarCardsMusica(
      long id,
      string nome,
@@ -851,7 +901,7 @@ namespace Projeto_da_feira
             TableLayoutPanel grid =
                 new TableLayoutPanel();
 
-            
+
 
             grid.Dock =
                 DockStyle.Fill;
@@ -862,7 +912,7 @@ namespace Projeto_da_feira
                 Color.Transparent;
 
             grid.RowCount = 3;
-            
+
 
             grid.ColumnStyles.Add(
                 new ColumnStyle(
@@ -993,6 +1043,7 @@ namespace Projeto_da_feira
                 Musica.id = id;
                 Musica.cover = url;
                 Musica.nome = nome;
+                PlaylisAtivada = false;
 
                 if (
                     e is MouseEventArgs mouseEventArgs
@@ -1030,7 +1081,7 @@ namespace Projeto_da_feira
             labelartist.Click += CliqueCard;
             pictureBox.Click += CliqueCard;
 
-            
+
             // Adicionando os controlos ao TableLayout nas respetivas linhas
             grid.Controls.Add(
                 pictureBox,
@@ -1074,7 +1125,7 @@ namespace Projeto_da_feira
             MouseEventArgs e)
         {
             base.OnMouseClick(e);
-            
+
             if (e.Button == MouseButtons.Right)
             {
                 FecharMenus();
@@ -1100,7 +1151,7 @@ namespace Projeto_da_feira
                     10
                 );
 
-            
+
 
             label.Size =
                 new Size(
@@ -1108,22 +1159,53 @@ namespace Projeto_da_feira
                     35
                 );
 
-            
+
 
             label.Cursor =
                 Cursors.Hand;
 
             return label;
         }
+        
 
-
+        public static bool PlaylisAtivada = false;
+        public static int PlaylistIndex = 0;
+        public  class PlaylistMusic
+        {
+            public  long Id;
+            public  string name;
+            public  string cover;
+        }
+        public static List<PlaylistMusic> Playlistlist = new List<PlaylistMusic>();
         // ALTERADO:
         // Menu principal da música.
-        
+
 
         // NOVO:
         // Cria o segundo menu contendo todas
         // as playlists do usuário.
+        public void ProximaMusica()
+        {
+            if (PlaylistIndex < Playlistlist.Count -1)
+            {
+                Musica.id = Playlistlist[PlaylistIndex + 1].Id;
+                Musica.nome = Playlistlist[PlaylistIndex + 1].name;
+                Musica.cover = Playlistlist[PlaylistIndex + 1].cover;
+                TocarMusica();
+                PlaylistIndex++;
+            }
+        }
+
+        public void MusicaAnterior()
+        {
+            if (PlaylistIndex >0) {
+                Musica.id = Playlistlist[PlaylistIndex - 1].Id;
+                Musica.nome = Playlistlist[PlaylistIndex - 1].name;
+                Musica.cover = Playlistlist[PlaylistIndex - 1].cover;
+                TocarMusica();
+                PlaylistIndex--;
+            }
+        }
         private void MostrarMenuMusica(
     Control card,
     Point mousePosition)
@@ -1189,7 +1271,11 @@ namespace Projeto_da_feira
                 {
                     MostrarPlaylists();
                 };
-
+            curtir.Click +=
+                (sender, e) =>
+                {
+                    adicionarMusicaPlaylist(Musica.id,curtirId);
+                };
 
             tocar.Click +=
                 (sender, e) =>
@@ -1336,7 +1422,7 @@ namespace Projeto_da_feira
                                         "nome_playlist"
                                     ].ToString();
 
-                                
+
                                 Guna2Button playlist =
                                     CriarOpcao(
                                         nomePlaylist
@@ -1458,7 +1544,7 @@ namespace Projeto_da_feira
                         )
                     )
                     {
-                      
+
 
                         cmd.Parameters.AddWithValue(
                             "@Musica",
@@ -1521,7 +1607,7 @@ namespace Projeto_da_feira
                     30
                 );
 
-            
+
 
             label.Cursor =
                 Cursors.Hand;
@@ -1565,38 +1651,35 @@ namespace Projeto_da_feira
         private void startGraph()
         {
             trocarPov();
-            
+
             musicImg.Visible = false;
-            
+
             imagembbar.Height = 70;
             imagembbar.Width = 70;
-            
+
             guna2TrackBar1.Location =
+            new Point(
+                this.Width / 2 - guna2TrackBar1.Width / 2,
+                60
+             );
+
+            tempo.Location =
                 new Point(
-                    this.Width / 2 -
-                    guna2TrackBar1.Width / 2,
-                   60
+                    guna2TrackBar1.Location.X - tempo.Width - 10,
+                    guna2TrackBar1.Location.Y + 10
                 );
+
             duracao.Location =
                 new Point(
-                    guna2TrackBar1.Location.X + 750 + 2,
-                   guna2TrackBar1.Location.Y +10
+                    guna2TrackBar1.Location.X + guna2TrackBar1.Width + 10,
+                    guna2TrackBar1.Location.Y + 10
                 );
-            tempo.Location =
-               new Point(
-                   guna2TrackBar1.Location.X + guna2TrackBar1.Width/2 -8,
-                  guna2TrackBar1.Location.Y +10
-               );
             volume.Location =
                 new Point(
                     guna2TrackBar1.Location.X + guna2TrackBar1.Width + 270,
                     50
                 );
-            guna2Button1.Location =
-                    new Point(
-                        volume.Location.X - guna2Button1.Width - 10,
-                        volume.Location.Y - guna2Button1.Height/2
-                    );
+            
 
             guna2CircleButton1.Location =
                 new Point(
@@ -1604,6 +1687,19 @@ namespace Projeto_da_feira
                     guna2CircleButton1.Width / 2,
                    -10
                 );
+            guna2CircleButton3.Location =
+                new Point(
+                    this.Width / 2 -
+                    guna2CircleButton1.Width / 2 -guna2CircleButton3.Width-10,
+                   -10
+                );
+            guna2CircleButton4.Location =
+                new Point(
+                    this.Width / 2 + guna2CircleButton1.Width/2
+                    +10,
+                   -10
+                );
+
             imagembbar.Location =
                 new Point(
                     30
@@ -1613,13 +1709,28 @@ namespace Projeto_da_feira
             titulolbl.Location =
                 new Point(
                     120
-                    , imagembbar.Location.Y + imagembbar.Height / 2 -15
+                    , imagembbar.Location.Y + imagembbar.Height / 2 - 15
+                    );
+            guna2Button1.Location =
+                    new Point(
+                        volume.Location.X - guna2Button1.Width / 2 - 10*9,
+                        volume.Location.Y - guna2Button1.Height / 2
+                    );
+            guna2Button4.Location =
+                    new Point(
+                        volume.Location.X - guna2Button1.Width / 2 - 10 * 5,
+                        volume.Location.Y - guna2Button1.Height / 2
+                    );
+            guna2Button3.Location =
+                    new Point(
+                        volume.Location.X - guna2Button1.Width / 2 -10,
+                        volume.Location.Y - guna2Button1.Height / 2 +2
                     );
             titulolbl.Width = 300; // Ou a largura desejada
             titulolbl.TextAlignment = ContentAlignment.TopLeft;
             guna2TrackBar1.BackColor =
                 Color.Transparent;
-            
+
             this.DoubleBuffered =
                 true;
 
@@ -1668,23 +1779,47 @@ namespace Projeto_da_feira
             object sender,
             EventArgs e)
         {
-            
+
             if (
                 axWindowsMediaPlayer1.playState ==
                 WMPLib.WMPPlayState.wmppsPlaying
             )
             {
+                guna2CircleButton1.ImageSize = new Size(55, 55);
                 guna2CircleButton1.Image = Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_30_51;
-                guna2CircleButton1.ImageOffset = new Point(1,-2);
+                guna2CircleButton1.ImageOffset = new Point(1, -2);
                 axWindowsMediaPlayer1.Ctlcontrols.pause();
             }
             else if (axWindowsMediaPlayer1.playState ==
                 WMPLib.WMPPlayState.wmppsPaused)
             {
-
+                guna2CircleButton1.ImageSize = new Size(30, 30);
                 guna2CircleButton1.Image = Properties.Resources.ChatGPT_Image_22_de_set__de_2026__23_37_37_removebg_preview;
                 guna2CircleButton1.ImageOffset = new Point(0, 0);
                 axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+        }
+
+
+        private void MutarMusica()
+        {
+            if (!musicaMutada)
+            {
+                // Guarda o volume atual pra poder restaurar depois
+                volumeAntesDoMute = volume.Value;
+
+                axWindowsMediaPlayer1.settings.mute = true;
+                volume.Value = 0;
+
+                musicaMutada = true;
+            }
+            else
+            {
+                axWindowsMediaPlayer1.settings.mute = false;
+                volume.Value = volumeAntesDoMute;
+                axWindowsMediaPlayer1.settings.volume = volumeAntesDoMute;
+
+                musicaMutada = false;
             }
         }
 
@@ -1695,13 +1830,16 @@ namespace Projeto_da_feira
             guna2CircleButton1.ImageOffset = new Point(0, 0);
             axWindowsMediaPlayer1.settings.volume = volume.Value;
             guna2Button1.Visible = true;
-            titulolbl.Text = Musica.nome;
-            imagembbar.ImageLocation = Musica.cover;
+            
             var musica =
                 await req.BuscarMusica(
                     Musica.id
                 );
+            Musica.cover = musica["album"]["cover_medium"].ToString();
+            Musica.nome = (string)musica["title"];
 
+            titulolbl.Text = Musica.nome;
+            imagembbar.ImageLocation = Musica.cover;
             string previewUrl =
                 musica["preview"].ToString();
 
@@ -1711,6 +1849,8 @@ namespace Projeto_da_feira
                 previewUrl;
 
             axWindowsMediaPlayer1.Ctlcontrols.play();
+
+            AtualizarImagens();
         }
 
 
@@ -1778,6 +1918,66 @@ namespace Projeto_da_feira
 
         int clickCount = 0;
 
+        // === CENTRALIZA TUDO QUE MOSTRA/ESCONDE/TROCA
+        // AS IMAGENS musicImg, img1 (anterior) e img2 (próxima) ===
+        private void AtualizarImagens()
+        {
+            bool telaCheia = clickCount % 2 == 1;
+
+            if (!telaCheia)
+            {
+                // clickCount par: modo compacto -> some com as 3 imagens
+                musicImg.Visible = false;
+                img1.Visible = false;
+                img2.Visible = false;
+                return;
+            }
+
+            // === Imagem principal (música atual) ===
+            musicImg.Location = new Point(
+                this.Width / 2 - musicImg.Width / 2,
+                this.Height / 2 - musicImg.Height / 2 - 50
+            );
+            musicImg.ImageLocation = Musica.cover;
+            musicImg.Visible = true;
+
+            // === Imagem da música ANTERIOR (à esquerda da principal) ===
+            if (historicoIndex > 0)
+            {
+                img1.ImageLocation =
+                    historicoMusica[historicoIndex - 1].Cover;
+
+                img1.Location = new Point(
+                    musicImg.Location.X - img1.Width - 20,
+                    musicImg.Location.Y + (musicImg.Height - img1.Height) / 2
+                );
+
+                img1.Visible = true;
+            }
+            else
+            {
+                img1.Visible = false;
+            }
+
+            // === Imagem da PRÓXIMA música (à direita da principal) ===
+            if (historicoIndex < historicoMusica.Count - 1)
+            {
+                img2.ImageLocation =
+                    historicoMusica[historicoIndex + 1].Cover;
+
+                img2.Location = new Point(
+                    musicImg.Location.X + musicImg.Width + 20,
+                    musicImg.Location.Y + (musicImg.Height - img2.Height) / 2
+                );
+
+                img2.Visible = true;
+            }
+            else
+            {
+                img2.Visible = false;
+            }
+        }
+
         private void guna2Button1_Click(
             object sender,
             EventArgs e)
@@ -1802,12 +2002,8 @@ namespace Projeto_da_feira
                 imagembbar.Visible = false;
                 titulolbl.Visible = false;
 
-                musicImg.Location =
-                    new Point(
-                        this.Width / 2 -
-                        musicImg.Width / 2,
-                        this.Height / 2 - musicImg.Height / 2 - 50
-                    );
+                AtualizarImagens();
+
                 lblMusicaNome.Width = 600; // Ou a largura desejada
                 lblMusicaNome.TextAlignment = ContentAlignment.MiddleCenter;
 
@@ -1815,12 +2011,9 @@ namespace Projeto_da_feira
                     (this.Width / 2) - (lblMusicaNome.Width / 2),
                     musicImg.Location.Y + musicImg.Height + 10
                 );
-                musicImg.Visible = true;
                 lblMusicaNome.Visible = true;
                 lblMusicaNome.Text =
                     Musica.nome;
-                musicImg.ImageLocation =
-                    Musica.cover;
             }
             else
             {
@@ -1831,7 +2024,8 @@ namespace Projeto_da_feira
                 Display2.FillColor = Color.Transparent;
                 trocarPov();
 
-                
+                AtualizarImagens();
+
             }
             this.Visible = true;
         }
@@ -1865,14 +2059,35 @@ namespace Projeto_da_feira
                 }
             }
         }
-        public static List<long> historicoMusica = new List<long>();
+        public class HistoricoItem
+        {
+            public long Id;
+            public string Nome;
+            public string Cover;
+        }
+
+        public static List<HistoricoItem> historicoMusica = new List<HistoricoItem>();
         public static int historicoIndex = -1;
         public static void AdicionarHistórico()
         {
-            
-            historicoMusica.Add(Musica.id);
+            // Não deixa adicionar a mesma música duas vezes SEGUIDAS
+            // (pode repetir, só não pode ser igual à última adicionada)
+            if (
+                historicoMusica.Count > 0 &&
+                historicoMusica[historicoMusica.Count - 1].Id == Musica.id
+            )
+            {
+                return;
+            }
+
+            historicoMusica.Add(new HistoricoItem
+            {
+                Id = Musica.id,
+                Nome = Musica.nome,
+                Cover = Musica.cover
+            });
             historicoIndex++;
-            
+
             Conexao conexao = new Conexao();
 
             using (NpgsqlConnection conn = conexao.Abrir())
@@ -1924,7 +2139,7 @@ namespace Projeto_da_feira
                     }
                 }
             }
-            
+
         }
         private void tableLayoutPanel1_Paint(
             object sender,
@@ -1995,7 +2210,7 @@ namespace Projeto_da_feira
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             // Limpa o painel caso já tenha outra tela aberta nele
-            
+
         }
 
         private void guna2CustomGradientPanel1_Paint_2(
@@ -2147,30 +2362,48 @@ namespace Projeto_da_feira
 
         private void guna2CircleButton4_Click(object sender, EventArgs e)
         {
-            historicbool = true;
-            if (historicoIndex < historicoMusica.Count - 1)
+            if (!PlaylisAtivada)
             {
-                historicoIndex++;
+                historicbool = true;
+                if (historicoIndex < historicoMusica.Count - 1)
+                {
+                    historicoIndex++;
 
-                Musica.id = historicoMusica[historicoIndex];
-                TocarMusica();
+                    Musica.id = historicoMusica[historicoIndex].Id;
+                    Musica.nome = historicoMusica[historicoIndex].Nome;
+                    Musica.cover = historicoMusica[historicoIndex].Cover;
+                    TocarMusica();
+                }
+            }
+            else
+            {
+                ProximaMusica();
             }
         }
 
         private void guna2CircleButton3_Click(object sender, EventArgs e)
         {
-            historicbool = true;
-            if (historicoIndex >0)
+            if (!PlaylisAtivada)
             {
-                historicoIndex--;
-                MessageBox.Show(historicoIndex.ToString());
-                Musica.id = historicoMusica[historicoIndex];
-                TocarMusica();
+                historicbool = true;
+                if (historicoIndex > 0)
+                {
+                    historicoIndex--;
+                    Musica.id = historicoMusica[historicoIndex].Id;
+                    Musica.nome = historicoMusica[historicoIndex].Nome;
+                    Musica.cover = historicoMusica[historicoIndex].Cover;
+                    TocarMusica();
+                }
+            }
+            else
+            {
+                MusicaAnterior();
             }
         }
         private void historicinvert()
         {
-            if (historicbool){
+            if (historicbool)
+            {
                 int indice = historicoIndex;
 
                 while (indice > 0)
@@ -2183,7 +2416,45 @@ namespace Projeto_da_feira
 
                 historicbool = false;
             }
-            
+
+        }
+        bool mutado = false;
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            mutado = !mutado;
+            if (mutado)
+            {
+                guna2Button3.Image = Properties.Resources.ChatGPT_Image_25_de_set__de_2026__06_49_00;
+                guna2Button3.ImageSize = new Size(35,35);
+                guna2Button3.ImageOffset = new Point(0,0);
+                volume.ThumbColor = Color.DarkGray;
+
+            }
+            else
+            {
+                guna2Button3.Image = Properties.Resources._4b014ba29201ba7dcfd07241e83b3c650ce79764;
+                guna2Button3.ImageSize = new Size(30, 30);
+                guna2Button3.ImageOffset = new Point(-1, -1);
+                volume.ThumbColor = Cores.Roxo;
+
+            }
+            axWindowsMediaPlayer1.settings.mute = mutado;
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+
+            form2.Show();
+            this.Hide();
+        }
+        bool loop = false;
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            loop = !loop;
+
+            axWindowsMediaPlayer1.settings.setMode("loop", loop);
         }
     }
 }

@@ -63,9 +63,59 @@ namespace Projeto_da_feira.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _4b014ba29201ba7dcfd07241e83b3c650ce79764 {
+            get {
+                object obj = ResourceManager.GetObject("4b014ba29201ba7dcfd07241e83b3c650ce79764", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _7a94a70690bdaacb9224ad610bbcddbac020a8c7__1_ {
+            get {
+                object obj = ResourceManager.GetObject("7a94a70690bdaacb9224ad610bbcddbac020a8c7 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _87_872187_lupa_search_icon_white_png {
             get {
                 object obj = ResourceManager.GetObject("87-872187_lupa-search-icon-white-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap aa11c68105829a4de5ef30e2991fdc6aae1515b3 {
+            get {
+                object obj = ResourceManager.GetObject("aa11c68105829a4de5ef30e2991fdc6aae1515b3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap aa11c68105829a4de5ef30e2991fdc6aae1515b3__1_ {
+            get {
+                object obj = ResourceManager.GetObject("aa11c68105829a4de5ef30e2991fdc6aae1515b3 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap aa11c68105829a4de5ef30e2991fdc6aae1515b3__2_ {
+            get {
+                object obj = ResourceManager.GetObject("aa11c68105829a4de5ef30e2991fdc6aae1515b3 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +136,16 @@ namespace Projeto_da_feira.Properties {
         public static System.Drawing.Bitmap beatcode {
             get {
                 object obj = ResourceManager.GetObject("beatcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bf738f2d8aa5d48bd629c5c926a936409c00f784 {
+            get {
+                object obj = ResourceManager.GetObject("bf738f2d8aa5d48bd629c5c926a936409c00f784", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +183,29 @@ namespace Projeto_da_feira.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ChatGPT_Image_25_de_set__de_2026__06_49_00 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 25 de set. de 2026, 06_49_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Design_sem_nome__1_ {
             get {
                 object obj = ResourceManager.GetObject("Design sem nome (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ff04ba51cfd6a2830f10d3c483e702625ae6d159 {
+            get {
+                object obj = ResourceManager.GetObject("ff04ba51cfd6a2830f10d3c483e702625ae6d159", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +256,26 @@ namespace Projeto_da_feira.Properties {
         public static System.Drawing.Bitmap Logo_Final__1__3 {
             get {
                 object obj = ResourceManager.GetObject("Logo Final (1) 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap w {
+            get {
+                object obj = ResourceManager.GetObject("w", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap w_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("w-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -242,5 +242,35 @@
   <ItemGroup>
     <None Include="Resources\Group 772.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa11c68105829a4de5ef30e2991fdc6aae1515b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa11c68105829a4de5ef30e2991fdc6aae1515b3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa11c68105829a4de5ef30e2991fdc6aae1515b3 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ff04ba51cfd6a2830f10d3c483e702625ae6d159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4b014ba29201ba7dcfd07241e83b3c650ce79764.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 25 de set. de 2026, 06_49_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bf738f2d8aa5d48bd629c5c926a936409c00f784.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7a94a70690bdaacb9224ad610bbcddbac020a8c7 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
